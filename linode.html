@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.eu01.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-576de6a06e4bafd36e6",applicationID:"169428213"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		
+            <style id="bb_learndash_30_custom_colors">
+
+                
+                
+                
+            </style>
+
+			<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v18.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>DevOps Online Training Courses | KodeKloud</title>
+	<meta name="description" content="KodeKloud is the #1 DevOps course provider and helps students learn trending technologies they need to thrive in their career. Learn more about KodeKloud!" />
+	<link rel="canonical" href="https://kodekloud.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="DevOps Online Training Courses | KodeKloud" />
+	<meta property="og:description" content="KodeKloud is the #1 DevOps course provider and helps students learn trending technologies they need to thrive in their career. Learn more about KodeKloud!" />
+	<meta property="og:url" content="https://kodekloud.com/" />
+	<meta property="og:site_name" content="KodeKloud" />
+	<meta property="article:modified_time" content="2022-06-28T06:37:04+00:00" />
+	<meta property="og:image" content="https://kodekloud.com/wp-content/uploads/2022/04/Screenshot-at-Apr-25-17-01-38-1024x802.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="802" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kodekloud.com/#organization","name":"KodeKloud","url":"https://kodekloud.com/","sameAs":[],"logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://kodekloud.com/#/schema/logo/image/","url":"https://kodekloud.com/wp-content/uploads/2020/08/logo.png","contentUrl":"https://kodekloud.com/wp-content/uploads/2020/08/logo.png","width":250,"height":60,"caption":"KodeKloud"},"image":{"@id":"https://kodekloud.com/#/schema/logo/image/"}},{"@type":"WebSite","@id":"https://kodekloud.com/#website","url":"https://kodekloud.com/","name":"KodeKloud","description":"Ensure you’re up-to-speed with DevOps and software development practices with Kode Kloud’s online Dev Ops training","publisher":{"@id":"https://kodekloud.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kodekloud.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://kodekloud.com/#primaryimage","url":"https://kodekloud.com/wp-content/uploads/2022/04/Screenshot-at-Apr-25-17-01-38.png","contentUrl":"https://kodekloud.com/wp-content/uploads/2022/04/Screenshot-at-Apr-25-17-01-38.png","width":1920,"height":1504,"caption":"KodeKloud"},{"@type":"WebPage","@id":"https://kodekloud.com/#webpage","url":"https://kodekloud.com/","name":"DevOps Online Training Courses | KodeKloud","isPartOf":{"@id":"https://kodekloud.com/#website"},"about":{"@id":"https://kodekloud.com/#organization"},"primaryImageOfPage":{"@id":"https://kodekloud.com/#primaryimage"},"datePublished":"2022-05-03T09:53:40+00:00","dateModified":"2022-06-28T06:37:04+00:00","description":"KodeKloud is the #1 DevOps course provider and helps students learn trending technologies they need to thrive in their career. Learn more about KodeKloud!","breadcrumb":{"@id":"https://kodekloud.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://kodekloud.com/"]}]},{"@type":"BreadcrumbList","@id":"https://kodekloud.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/kodekloud.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<link rel='stylesheet' id='wp-block-library-css'  href='https://kodekloud.com/wp-includes/css/dist/block-library/style.min.css?ver=6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bb_theme_block-buddypanel-style-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/blocks/buddypanel/build/style-buddypanel.css?ver=a43481f57c3cc73f6cce06223a569c14' type='text/css' media='all' />
+<link rel='stylesheet' id='ultp-gutenberg-blocks-css'  href='https://kodekloud.com/wp-content/plugins/uncanny-toolkit-pro/src/blocks/dist/blocks.style.build.css?ver=3.7.5' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='dashicons-css'  href='https://kodekloud.com/wp-includes/css/dashicons.min.css?ver=6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-nouveau-css'  href='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/css/buddypress.min.css?ver=2.0.1' type='text/css' media='screen' />
+<style id='bp-nouveau-inline-css' type='text/css'>
+.list-wrap .bs-group-cover a:before{ background:unset; }
+</style>
+<link rel='stylesheet' id='bp-nouveau-icons-map-css'  href='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/icons-map.css?ver=2.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-nouveau-bb-icons-css'  href='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/bb-icons.css?ver=2.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='ld_cvss-font-awesome-css'  href='https://kodekloud.com/wp-content/plugins/learndash-certificate-verify-and-share/assets/css/font-awesome.min.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='ld_cvss-social-buttons-css'  href='https://kodekloud.com/wp-content/plugins/learndash-certificate-verify-and-share/assets/css/social-buttons.min.css?ver=1.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='learndash_quiz_front_css-css'  href='//kodekloud.com/wp-content/plugins/sfwd-lms/themes/legacy/templates/learndash_quiz_front.min.css?ver=3.6.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-dropdown-css-css'  href='//kodekloud.com/wp-content/plugins/sfwd-lms/assets/css/jquery.dropdown.min.css?ver=3.6.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='learndash_lesson_video-css'  href='//kodekloud.com/wp-content/plugins/sfwd-lms/themes/legacy/templates/learndash_lesson_video.min.css?ver=3.6.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='learndash-front-css'  href='//kodekloud.com/wp-content/plugins/sfwd-lms/themes/ld30/assets/css/learndash.min.css?ver=3.6.0.3' type='text/css' media='all' />
+<style id='learndash-front-inline-css' type='text/css'>
+		.learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
+			max-width: inherit;
+		}
+		
+</style>
+<link rel='stylesheet' id='uncannyowl-learndash-toolkit-free-css'  href='https://kodekloud.com/wp-content/plugins/uncanny-learndash-toolkit/src/assets/frontend/dist/bundle.min.css?ver=3.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ultp-frontend-css'  href='https://kodekloud.com/wp-content/plugins/uncanny-toolkit-pro/src/assets/dist/frontend/bundle.min.css?ver=3.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='kk_ld_video_style-css'  href='https://kodekloud.com/wp-content/plugins/kk-learndash-add-on/assets/css/kk-learndash-video.css?ver=1618468866' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-fonts-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/fonts/fonts.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-magnific-popup-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/vendors/magnific-popup.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-select2-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/vendors/select2.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/theme.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-template-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/template-v1.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-buddypress-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/buddypress.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-theme-learndash-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/css/learndash.min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buddyboss-child-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme-child/assets/css/custom.css?ver=1655982702' type='text/css' media='all' />
+<link rel='stylesheet' id='kodekloud-css-css'  href='https://kodekloud.com/wp-content/themes/buddyboss-theme-child/assets/css/kk.css?ver=1651844304' type='text/css' media='all' />
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/miniorange-login-openid/includes/js/jquery.cookie.min.js?ver=6.0' id='js-cookie-script-js'></script>
+<script type='text/javascript' id='mo-social-login-script-js-extra'>
+/* <![CDATA[ */
+var my_ajax_object = {"ajax_url":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/miniorange-login-openid/includes/js/social_login.js?ver=6.0' id='mo-social-login-script-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-core/js/widget-members.min.js?ver=2.0.1' id='bp-widget-members-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-core/js/jquery-query.min.js?ver=2.0.1' id='bp-jquery-query-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-core/js/vendor/jquery-cookie.min.js?ver=2.0.1' id='bp-jquery-cookie-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-core/js/vendor/jquery-scroll-to.min.js?ver=2.0.1' id='bp-jquery-scroll-to-js'></script>
+<script type='text/javascript' id='uncannyowl-learndash-toolkit-free-js-extra'>
+/* <![CDATA[ */
+var UncannyToolkit = {"ajax":{"url":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php","nonce":"b4d47b531f"},"integrity":{"shouldPreventConcurrentLogin":false},"i18n":{"dismiss":"Dismiss","preventConcurrentLogin":"Your account has exceeded maximum concurrent login number.","error":{"generic":"Something went wrong. Please, try again"}},"modals":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/uncanny-learndash-toolkit/src/assets/frontend/dist/bundle.min.js?ver=3.6.2' id='uncannyowl-learndash-toolkit-free-js'></script>
+<script type='text/javascript' id='ultp-frontend-js-extra'>
+/* <![CDATA[ */
+var UncannyToolkitPro = {"restURL":"https:\/\/kodekloud.com\/wp-json\/uo_toolkit\/v1\/","nonce":"7fa964516c"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/uncanny-toolkit-pro/src/assets/dist/frontend/bundle.min.js?ver=3.7.5' id='ultp-frontend-js'></script>
+<script type='text/javascript' id='kk_ld_script-js-extra'>
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php","lab_id":"","kodekloud_id":"","environment_id":"","scenarioid_id":"","quiz_id":"","cloud_lab":"","cloud_lab_profile":"","kk_post_id":"638385","cloud_lab_provider":null,"nonce":"aa0c6b3b14"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/kk-learndash-add-on/assets/js/kk-learndash.js?ver=1650974229' id='kk_ld_script-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme-child/assets/js/custom.js?ver=1650880028' id='buddyboss-child-js-js'></script>
+<link rel="https://api.w.org/" href="https://kodekloud.com/wp-json/" /><link rel="alternate" type="application/json" href="https://kodekloud.com/wp-json/wp/v2/pages/638385" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://kodekloud.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://kodekloud.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://kodekloud.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://kodekloud.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkodekloud.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://kodekloud.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkodekloud.com%2F&#038;format=xml" />
+
+	<script>var ajaxurl = 'https://kodekloud.com/wp-admin/admin-ajax.php';</script>
+
+				<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v8.12.0-->
+			<script type="text/javascript">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentId", "standard-page"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+						<script>
+				(function() {
+					var hbspt = window.hbspt = window.hbspt || {};
+					hbspt.forms = hbspt.forms || {};
+					hbspt._wpFormsQueue = [];
+					hbspt.enqueueForm = function(formDef) {
+						if (hbspt.forms && hbspt.forms.create) {
+							hbspt.forms.create(formDef);
+						} else {
+							hbspt._wpFormsQueue.push(formDef);
+						}
+					};
+					if (!window.hbspt.forms.create) {
+						Object.defineProperty(window.hbspt.forms, 'create', {
+							configurable: true,
+							get: function() {
+								return hbspt._wpCreateForm;
+							},
+							set: function(value) {
+								hbspt._wpCreateForm = value;
+								while (hbspt._wpFormsQueue.length) {
+									var formDef = hbspt._wpFormsQueue.shift();
+									if (!document.currentScript) {
+										var formScriptId = 'leadin-forms-v2-js';
+										hubspot.utils.currentScript = document.getElementById(formScriptId);
+									}
+									hbspt._wpCreateForm.call(hbspt.forms, formDef);
+								}
+							},
+						});
+					}
+				})();
+			</script>
+		
+
+<script>
+	function uuid() {
+	  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+		var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+		return v.toString(16);
+	  });
+	}
+</script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+	  'event': 'event_id',
+	  'event_id': uuid(),
+	  'user_id': '702395',
+	  'user_data': {
+		  'email_address': 'aadhaarkoul2002@gmail.com',
+		  'phone_number': '',
+		  },
+	});		
+</script>	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-LYL47LCHPW"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-LYL47LCHPW', {
+		'transport_url': 'https://gtm.kodekloud.com',
+		'send_page_view': false,
+		'first_party_collection': true,
+		'tag_source': 'server_side',
+		'x-fb-event_id': uuid()
+		});
+</script>
+<script>
+	gtag("event", "page_view", {
+	'first_party_collection': true,
+	'tag_source': 'server_side',
+	'empty_variable': '',
+	'event_id': uuid(),
+	'timestamp': new Date().toISOString(),
+	'user_id': '702395',
+	'user_data': {
+		  'email_address': 'aadhaarkoul2002@gmail.com',
+		  'phone_number': '',
+		  },
+	});
+</script>
+<script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('YEgkB8lPGqx8ep3Z'); </script>
+<script>
+  (function(d, id) {
+    if (d.getElementById(id)) return;
+    var sc, node = d.getElementsByTagName('script')[0];
+    sc = d.createElement('script'); sc.id = id;
+    sc.src = 'https://sdk.getsitekit.com/static/js/app.js#apiKey=e0610cb3d6f442319e7157d133604c4d';
+    node.parentNode.insertBefore(sc, node);
+  }(document, 'sitekit-sdk'));
+</script>
+
+<script type="text/javascript">var ajaxurl = "https://kodekloud.com/wp-admin/admin-ajax.php"</script>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var dataLayer_content = {"visitorEmail":"aadhaarkoul2002@gmail.com","visitorEmailHash":"56542fbb0948a4d3ed27f216d9e07f34e388e24985cfa89cc68ed734e31cf48b","visitorUsername":"Aadhaar-koul","visitorId":702395,"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"Goran Rad"};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KXS9M3C');</script>
+<!-- End Google Tag Manager --><!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script --><meta name="framework" content="Redux 4.3.1" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://kodekloud.com/wp-content/uploads/2020/06/Cloud_alpha.png" sizes="32x32" />
+<link rel="icon" href="https://kodekloud.com/wp-content/uploads/2020/06/Cloud_alpha.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kodekloud.com/wp-content/uploads/2020/06/Cloud_alpha.png" />
+<meta name="msapplication-TileImage" content="https://kodekloud.com/wp-content/uploads/2020/06/Cloud_alpha.png" />
+<style id="buddyboss_theme-style">:root{--bb-primary-color:#007CFF;--bb-primary-color-rgb:0, 124, 255;--bb-body-background-color:#FAFBFD;--bb-content-background-color:#FFFFFF;--bb-content-alternate-background-color:#FBFBFC;--bb-content-border-color:#E7E9EC;--bb-content-border-color-rgb:231, 233, 236;--bb-cover-image-background-color:#ffffff;--bb-headings-color:#122B46;--bb-body-text-color:#4D5C6D;--bb-alternate-text-color:#A3A5A9;--bb-alternate-text-color-rgb:163, 165, 169;--bb-primary-button-background-regular:#007cff;--bb-primary-button-background-hover:#006fe5;--bb-primary-button-border-regular:#007cff;--bb-primary-button-border-hover:#006fe5;--bb-primary-button-text-regular:#ffffff;--bb-primary-button-text-regular-rgb:255, 255, 255;--bb-primary-button-text-hover:#ffffff;--bb-primary-button-text-hover-rgb:255, 255, 255;--bb-secondary-button-background-regular:#F2F4F5;--bb-secondary-button-background-hover:#385DFF;--bb-secondary-button-border-regular:#F2F4F5;--bb-secondary-button-border-hover:#385DFF;--bb-secondary-button-text-regular:#1E2132;--bb-secondary-button-text-hover:#FFFFFF;--bb-header-background:#ffffff;--bb-header-alternate-background:#F2F4F5;--bb-header-links:#939597;--bb-header-links-hover:#007CFF;--bb-header-mobile-logo-size:160px;--bb-header-height:76px;--bb-sidenav-background:#ffffff;--bb-sidenav-alt-background:#F2F4F5;--bb-sidenav-links:#939597;--bb-sidenav-links-hover:#007CFF;--bb-footer-background:#364367;--bb-footer-widget-background:#364367;--bb-footer-text-color:#a3a5a9;--bb-footer-menu-link-color-regular:#f2f2f2;--bb-footer-menu-link-color-hover:#54616a;--bb-footer-menu-link-color-active:#1E2132;--bb-admin-screen-bgr-color:#FAFBFD;--bb-admin-screen-txt-color:#122B46;--bb-login-register-link-color-regular:#5A5A5A;--bb-login-register-link-color-hover:#1E42DD;--bb-login-register-button-background-color-regular:#385DFF;--bb-login-register-button-background-color-hover:#1E42DD;--bb-login-register-button-border-color-regular:#385DFF;--bb-login-register-button-border-color-hover:#1E42DD;--bb-login-register-button-text-color-regular:#FFFFFF;--bb-login-register-button-text-color-hover:#FFFFFF;--bb-label-background-color:#D7DFFF;--bb-label-text-color:#385DFF;--bb-tooltip-background:#122b46;--bb-tooltip-background-rgb:18, 43, 70;--bb-tooltip-color:#ffffff;--bb-default-notice-color:#007CFF;--bb-default-notice-color-rgb:0, 124, 255;--bb-success-color:#1CD991;--bb-success-color-rgb:28, 217, 145;--bb-warning-color:#f7ba45;--bb-warning-color-rgb:247, 186, 69;--bb-danger-color:#EF3E46;--bb-danger-color-rgb:239, 62, 70;--bb-login-custom-heading-color:#FFFFFF;--bb-button-radius:100px;--bb-block-radius:4px;--bb-block-radius-inner:4px;--bb-input-radius:4px;}.bb-style-primary-bgr-color {background-color:#007CFF;}.bb-style-border-radius {border-radius:100px;}#site-logo .site-title img {max-height:inherit;}.site-header-container .site-branding {min-width:186px;}#site-logo .site-title .bb-logo img,#site-logo .site-title img.bb-logo,.buddypanel .site-title img {width:186px;}.site-title img.bb-mobile-logo {width:160px;}.site-header-container #site-logo .bb-logo img,.site-header-container #site-logo .site-title img.bb-logo,.site-title img.bb-mobile-logo {max-height:76px}.site-header,.sticky-header .site-header:not(.has-scrolled) {-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}.sticky-header .site-header {position:fixed;z-index:610;width:100%;}.sticky-header .bp-search-ac-header {position:fixed;}.sticky-header .site-content,body.buddypress.sticky-header .site-content,.bb-buddypanel.sticky-header .site-content,.single-sfwd-quiz.bb-buddypanel.sticky-header .site-content,.single-sfwd-lessons.bb-buddypanel.sticky-header .site-content,.single-sfwd-topic.bb-buddypanel.sticky-header .site-content {padding-top:76px}.sticky-header .site-content {min-height:85vh;}.site-header .site-header-container,.header-search-wrap,.header-search-wrap input.search-field,.header-search-wrap form.search-form {height:76px;}.sticky-header .bp-feedback.bp-sitewide-notice {top:76px;}@media screen and (max-width:767px) {.bb-mobile-header {height:76px;}#learndash-content .lms-topic-sidebar-wrapper {width:100%;}#learndash-content .lms-topic-sidebar-wrapper .lms-topic-sidebar-data {width:100%;height:calc(90vh - 76px);max-width:350px;}}.bb-document-theater .bb-media-section.bb-media-no-preview .img-section a.download-button:hover,.bb-document-theater .bb-media-section .img-section img > .download-button:hover,.bb-forums .bb-forums__list .bb-forums__item .item-meta .bs-replied > a:hover,.bb-forums .bb-forums__list .bb-forums__item .item-title > a:hover,#buddypress .users-header .gamipress-buddypress-achievements .gamipress-buddypress-achievement-title:hover,#buddypress .users-header .gamipress-buddypress-ranks .gamipress-buddypress-rank-title:hover {color:#007CFF;}#send-private-message.generic-button a:before,.toggle-password,.toggle-password:hover,#message-threads .bp-message-link:hover .thread-to,span.triangle-play-icon,.bb-document-theater .bb-media-section.bb-media-no-preview .img-section a.download-button,.bb-document-theater .bb-media-section .img-section img > .download-button {color:#007CFF;}.dropzone .dz-preview .dz-progress-ring-wrap .dz-progress-ring circle {stroke:#007CFF;}.bb-shared-screen svg g {stroke:#007CFF;}.group-messages.private-message #group-messages-container .group-messages-members-listing .all-members .group-message-member-li.selected .invite-button .icons:before {background:#007CFF;}span.triangle-play-icon,.video-thumbnail-content .bp-video-thumbnail-auto-generated .video-thumb-list li .bb-custom-check:checked ~ a,.video-thumbnail-content .bb-dropzone-wrap .bb-custom-check:checked ~ .bb-field-wrap .dropzone .dz-preview .dz-image,.video-thumbnail-content .bb-dropzone-wrap .bb-custom-check[name="bb-video-thumbnail-select"]:checked ~ .video-thumbnail-custom {border-color:#007CFF;}.toggle-sap-widgets:hover .cls-1 {fill:#007CFF;}.bb-cover-photo,.bb-cover-photo .progress {background:#ffffff;}.header-button.underlined {box-shadow:0 -1px 0 #007CFF inset;}[data-balloon]:after,[data-bp-tooltip]:after {background-color:rgba( 18,43,70,0.95 );}[data-balloon]:before,[data-bp-tooltip]:before {background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba( 18,43,70,0.95 )%22%20transform%3D%22rotate(0)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;}[data-balloon][data-balloon-pos='right']:before {background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba( 18,43,70,0.95 )%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;}[data-balloon][data-balloon-pos='left']:before {background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba( 18,43,70,0.95 )%22%20transform%3D%22rotate(-90 18 18)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;}[data-balloon][data-balloon-pos='down']:before {background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba( 18,43,70,0.95 )%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;}.bb-header-buttons a.button.outline,.site-header .hideshow .more-button > i,.user-wrap.menu-item-has-children #header-my-account-menu a {color:#939597;}.bb-header-buttons a.button.outline:hover {color:#007CFF;}.bp-messages-content .actions .message_actions .message_action__list li a:hover,.user-wrap.menu-item-has-children #header-my-account-menu a:hover,.user-wrap.menu-item-has-children #header-my-account-menu a:hover > i {color:#007CFF;}.bb-follow-links a,.elementor-widget-wp-widget-bbp_views_widget ul li a,.elementor-widget-wp-widget-recent-posts ul li a,.elementor-element.widget.bp-latest-activities ul li a,.elementor-widget-wp-widget-bbp_replies_widget ul li a,.elementor-widget-wp-widget-bbp_forums_widget ul li a,.elementor-widget-wp-widget-bbp_topics_widget ul li a {color:#A3A5A9;}.bb-follow-links a:hover,.elementor-widget-wp-widget-bbp_views_widget ul li a:hover,.elementor-widget-wp-widget-recent-posts ul li a:hover,.elementor-element.widget.bp-latest-activities ul li a:hover,.elementor-widget-wp-widget-bbp_replies_widget ul li a:hover,.elementor-widget-wp-widget-bbp_forums_widget ul li a:hover,.elementor-widget-wp-widget-bbp_topics_widget ul li a:hover {color:#007CFF;}.comment-respond .vcard a,.widget.buddypress .bp-login-widget-user-links > div.bp-login-widget-user-link a,#whats-new-form .username,.bb-recent-posts h4 a.bb-title,.bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-description-wrap .document-detail-wrap,.activity-list li.bbp_topic_create .bp-activity-head .bb-post-singular,.activity-list li.bbp_reply_create .bp-activity-head .bb-post-singular,.activity-list li.blogs .bp-activity-head .bb-post-singular,.activity-list li.bbp_topic_create .activity-content .activity-inner .bb-post-title,.activity-list li.bbp_reply_create .activity-content .activity-inner .bb-post-title,.activity-list li.bbp_reply_create .activity-content .activity-inner .activity-discussion-title-wrap {color:#122B46;}.comment-respond .vcard a:hover,.widget.buddypress .bp-login-widget-user-links > div.bp-login-widget-user-link a:hover,#whats-new-form .username:hover,.bb-recent-posts h4 a.bb-title:hover,.bb-activity-media-wrap .bb-activity-media-elem.document-activity.code-full-view .document-action-wrap .document-action_collapse i,.search-document-list .media-folder_items .media-folder_details__bottom .media-folder_author a:hover,#media-folder-document-data-table .media-folder_items .media-folder_details__bottom .media-folder_author a:hover,.search-document-list .media-folder_items .media-folder_group a:hover,.search-media-list .media-album_modified .media-album_details__bottom .media-album_author a:hover,.search-media-list .media-album_group_name a:hover,.search-document-list .media-folder_items .media-folder_details .media-folder_name:hover,#media-folder-document-data-table .media-folder_items .media-folder_details .media-folder_name:hover,#media-stream.document-parent.group-column #media-folder-document-data-table .media-folder_items .media-folder_group a:hover,.search-media-list .media-album_details .media-album_name:hover,.bb-document-theater .bb-media-section.bb-media-no-preview .img-section a.download-button,.search-results .bp-list li .item-meta a:hover {color:#007CFF;}#whats-new-textarea-placeholder [contenteditable="true"]:empty:before,#whats-new-textarea [contenteditable="true"]:empty:before {color:rgba( 77,92,109,0.5 );}.ac-reply-toolbar a .bb-icon,#whats-new-toolbar a .bb-icon,#whats-new-messages-toolbar a .bb-icon,.ac-reply-toolbar .emojionearea .emojionearea-button,#whats-new-toolbar .emojionearea .emojionearea-button,#whats-new-messages-toolbar .emojionearea .emojionearea-button,#editor-toolbar .bb-icon,#editor-toolbar .emojionearea-button:before,.medium-editor-toolbar .medium-editor-toolbar-actions button,.buddypress .medium-editor-toolbar .medium-editor-toolbar-actions button,#buddypress .medium-editor-toolbar .medium-editor-toolbar-actions button,.medium-editor-toolbar-form a,.bp-nouveau-activity-form-placeholder- .bb-model-header a .bb-icon-close,.activity-update-form .bb-model-header a .bb-icon-close,#buddypress input#privacy-status-back,#buddypress input#privacy-status-group-back {color:rgba( 18,43,70,0.5 );}.ac-reply-toolbar a:hover .bb-icon,#whats-new-toolbar a:hover .bb-icon,#whats-new-messages-toolbar a:hover .bb-icon,.ac-reply-toolbar a.active .bb-icon,#whats-new-toolbar a.active .bb-icon,#whats-new-messages-toolbar a.active .bb-icon,.ac-reply-toolbar .active a .bb-icon,#whats-new-toolbar .active a .bb-icon,#whats-new-messages-toolbar .active a .bb-icon,.ac-reply-toolbar a.open .bb-icon,#whats-new-toolbar a.open .bb-icon,#whats-new-messages-toolbar a.open .bb-icon,.ac-reply-toolbar .emojionearea .emojionearea-button.active,#whats-new-toolbar .emojionearea .emojionearea-button.active,#whats-new-messages-toolbar .emojionearea .emojionearea-button.active,#editor-toolbar .emojionearea-button.active:before,#editor-toolbar .active .bb-icon:before,.medium-editor-toolbar .medium-editor-toolbar-actions button.medium-editor-button-active,.buddypress .medium-editor-toolbar .medium-editor-toolbar-actions button.medium-editor-button-active,#buddypress .medium-editor-toolbar .medium-editor-toolbar-actions button.medium-editor-button-active,.medium-editor-toolbar-form a:hover,.bp-nouveau-activity-form-placeholder- .bb-model-header a:hover .bb-icon-close,.activity-update-form .bb-model-header a:hover .bb-icon-close,#buddypress input#privacy-status-back:hover,#buddypress input#privacy-status-group-back:hover {color:rgba( 18,43,70,1 );}.dropzone.document-dropzone .dz-preview .dz-remove,.dropzone.video-dropzone .dz-preview.dz-complete.dz-file-preview .dz-remove:after {color:rgba( 163,165,169,0.8 );}.dropzone.document-dropzone .dz-preview .dz-remove:hover,.dropzone.video-dropzone .dz-preview.dz-complete.dz-file-preview .dz-remove:hover:after {color:rgba( 163,165,169,1 );}.show-support h6,h4 .bp-reported-type,.dropzone .dz-default .dz-button > strong,.dropzone .dz-default .dz-button:hover > strong,.activity-link-preview-title {color:#122B46;}.site-title, .site-title a {color:#007CFF;}body #main-wrap,.formatted-content {background-color:#FAFBFD;}.bb_processing_overlay {background-color:rgba( 250,251,253,0.8 );}.bs-item-list.list-view div.bs-item-wrap:not(.no-hover-effect):hover {border-left-color:#FFFFFF;border-right-color:#FFFFFF;border-bottom-color:#FFFFFF;}@media screen and (max-width:1024px) and (min-width:768px) {.side-panel {background-color:#FAFBFD;}}.os-loader,.medium-editor-insert-plugin .medium-insert-buttons .medium-insert-buttons-addons li,.sap-publish-popup,.posts-stream,.posts-stream .inner,.sl-count:after,.sl-count:before,.sl-icon:after,.sl-icon:before,.main-navigation li ul ul,.main-navigation li ul,.header-account-login .pop .bp_components .menupop:not(#wp-admin-bar-my-account) > .ab-sub-wrapper,.header-account-login .pop .links li > .sub-menu,.header-account-login .pop .bp_components .menupop:not(#wp-admin-bar-my-account) > .ab-sub-wrapper:before,.header-account-login .pop .links li > .sub-menu:before,.header-notifications .pop,.header-account-login .pop,#whats-new-header:after,a.to-top,.bbp-forum-data:before {background-color:#FAFBFD;}#item-header.groups-header .bp-feedback.bp-feedback.success .bp-icon {color:#1CD991;}.bbp-topic-reply-link,.subscription-toggle,#buddypress .action .button,.buddypress .buddypress-wrap .comment-reply-link,.buddypress .buddypress-wrap .generic-button a,.buddypress .buddypress-wrap a.bp-title-button,.buddypress .buddypress-wrap a.button,.buddypress .buddypress-wrap input[type=button],.buddypress .buddypress-wrap input[type=reset],.buddypress .buddypress-wrap input[type=submit],.buddypress .buddypress-wrap ul.button-nav:not(.button-tabs) li a,button.small,.button.small,input[type=button].small,input[type=submit].small,.buddypress .buddypress-wrap .comment-reply-link.small,.buddypress .buddypress-wrap .generic-button a.small,.buddypress .buddypress-wrap a.bp-title-button.small,.buddypress .buddypress-wrap a.button.small,.buddypress .buddypress-wrap button.small,.buddypress .buddypress-wrap input[type=button].small,.buddypress .buddypress-wrap input[type=reset].small,.buddypress .buddypress-wrap input[type=submit].small,.buddypress .buddypress-wrap ul.button-nav:not(.button-tabs) li a.small,#buddypress .comment-reply-link,#buddypress .standard-form button,#buddypress input[type=button],#buddypress input[type=reset],#buddypress input[type=submit],#buddypress ul.button-nav li a,a.bp-title-button,.ld-course-list-items .ld_course_grid .bb-cover-list-item p.ld_course_grid_button a {border-radius:100px;}.no-results.not-found .search-form .search-submit {border-radius:0 100px 100px 0;}</style>
+            <style id="buddyboss_theme-bp-style">
+                #send-private-message.generic-button a:before,#buddypress #members-list .members-meta.action > .generic-button:last-child a,#buddypress #members-list .members-meta.action > .generic-button:last-child button,body #buddypress .bp-list .action .generic-button a,#buddypress .activity-list .action.activity-meta .button:hover,#buddypress .activity-list .action.activity-meta .button:hover span,#groups-list.bp-list.grid.bb-cover-enabled .item-avatar .generic-button .group-button,#buddypress .only-grid-view .follow-button .follow-button,.mepr-price-menu.custom .mepr-price-box-benefits-item:before,#message-threads li.unread .thread-to:before,.messages-wrapper #compose-personal-li a,.search-results .pagination-links a,#buddypress .activity-lists .action.bp-generic-meta .button,#bbpress-forums .activity-list .action.bp-generic-meta .button,.recording-preview-img:hover span.triangle-play-icon,.activity-list .activity-item .bp-generic-meta.action .open-close-activity:before,.activity-list .activity-item .bp-generic-meta.action .buddyboss_edit_activity:before,.activity-list .activity-item .bp-generic-meta.action .buddyboss_edit_activity_cancel:before,#media-folder-document-data-table .media-folder_items .media-folder_actions .media-folder_action__list ul li a:hover,#bp-media-single-folder .bp-media-header-wrap .media-folder_items .media-folder_action__list ul li a:hover,#media-stream.media .bb-photo-thumb .media-action-wrap .media-action_list ul li a:hover,.bb-activity-media-wrap .bb-activity-media-elem.media-activity .media-action-wrap .media-action_list ul li a:hover,#buddypress .standard-form button.outline,#buddypress .standard-form button.outline:hover,.video-js .vjs-play-progress:before,#media-stream.media .bb-video-thumb .item-action-wrap .item-action_list ul li a:hover,.bb-activity-video-wrap .bb-activity-video-elem .item-action-wrap .item-action_list ul li a:hover,.bb-activity-media-wrap .bb-activity-video-elem .video-action-wrap .media-action_list ul li a:hover,.bb-activity-media-wrap .bb-activity-video-elem .video-action-wrap .video-action_list ul li a:hover,.bb-media-model-container .activity-list .video-action-wrap.item-action-wrap .video-action_list ul li a:hover {color:#007CFF;}.topic .forum_single_action_wrap .forum_single_action_options .bb-topic-report-link-wrap a:hover,#buddypress .forum_single_action_wrap .forum_single_action_options .bb-topic-report-link-wrap a:hover {color:#007CFF !important;}#buddypress .activity-lists .action.bp-generic-meta .button:hover,#bbpress-forums .activity-list .action.bp-generic-meta .button:hover,#buddypress .activity-lists .action.bp-generic-meta .button:hover span,#bbpress-forums .activity-list .action.bp-generic-meta .button:hover span,.activity-list .activity-item .bp-generic-meta.action .unfav:hover:before,#buddypress .only-grid-view .follow-button .follow-button:hover,#groups-list.bp-list.grid.bb-cover-enabled .item-avatar .generic-button .group-button:hover,#certificate_list .bb-certificate-download a:hover,.bp-search-results-wrap .view-all-link:hover,.bp-search-results-wrap .view-all-link:hover:after,.activity-list .activity-item .bp-generic-meta.action .open-close-activity:hover:before,.activity-list .activity-item .bp-generic-meta.action .buddyboss_edit_activity:hover:before,.activity-list .activity-item .bp-generic-meta.action .buddyboss_edit_activity_cancel:hover:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-arrow-circle .comment-count:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-arrow-circle .text:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-discussion .comment-count:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-discussion .text:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .comment-count:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .text:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-discussion .text:hover:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .comment-count:hover:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .text:hover:before {color:#007CFF;}#buddypress #members-list .members-meta.action > .generic-button:last-child a,#buddypress #members-list .members-meta.action > .generic-button:last-child button,body #buddypress .bp-list .action .generic-button a,input:checked+.bb-time-meridian,.group-invites .bp-dir-hori-nav:not(.bp-vertical-navs) #item-body #group-invites-container .subnav li.selected,#buddypress .standard-form button.outline,#buddypress .standard-form button.outline:hover {border-color:#007CFF;}.video-js .vjs-play-progress,.dropzone .dz-preview .dz-progress .dz-upload {background:#007CFF;}.mepr-price-menu.custom .mepr-price-box-button a,body #buddypress a.export-csv,input:checked+.bb-time-meridian,input:checked+.bb-toggle-slider,.bb-groups-messages-left-inner input:checked + .bp-group-message-slider,.widget_bp_core_login_widget.buddypress #bp-login-widget-form #bp-login-widget-submit.bp-login-btn-active,#item-body #group-invites-container .bp-invites-content #send-invites-editor #bp-send-invites-form .action button#bp-invites-send,#message-threads li.unread .thread-date time:after,.buddypress-wrap .bp-subnavs ul #bp-zoom-switch-type .bb-toggle-switch .bb-toggle-slider,#bbpress-forums div.bbp-reply-content a.bp-video-thumbnail-submit {background-color:#007CFF;}#bbpress-forums .bbp-reply-form.bb-modal a#bbp-close-btn:hover,#bbpress-forums .bbp-topic-form.bb-modal a#bbp-close-btn:hover,.bbp-reply-form-success-modal .bbp-reply-form-success .reply-content .content-title .close .js-modal-close:hover,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-arrow-circle .comment-count:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-discussion .text:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .comment-count:before,.activity-list .activity-item .activity-inner .activity-inner-meta .button.bb-icon-chat .text:before,.activity-list li.blogs .activity-content .activity-inner .activity-discussion-title-wrap a:hover{color:#007CFF;}#buddypress .bp-navs.bb-bp-tab-nav a,body #buddypress .bp-list.members-list .action .generic-button button,body #buddypress .bp-list.members-list .action .generic-button a,#item-body #group-invites-container .bp-navs.group-subnav a,#buddypress .profile.edit .button-nav a,#message-threads li .thread-content .thread-subject a,#message-threads li.unread .thread-subject .subject,.avatar-crop-management #avatar-crop-actions a.avatar-crop-cancel,#media-folder-document-data-table .media-folder_items .media-folder_actions .media-folder_action__anchor {color:#122B46;}.bb-groups-messages-left-inner .input:focus + .bp-group-message-slider {box-shadow:0 0 1px #007CFF;}#buddypress .bp-navs.bb-bp-tab-nav a:hover,.elementor-widget-wrap div.item-options a:hover,body #buddypress .bp-list.members-list .action .generic-button button:hover,body #buddypress .bp-list.members-list .action .generic-button a:hover,#item-body #group-invites-container .bp-navs.group-subnav a:hover,#buddypress .profile.edit .button-nav a:hover,#buddypress .bp-search-results-wrapper .bp-navs a:hover,#message-threads li .thread-content .thread-subject a:hover,#message-threads li.unread .thread-subject .subject:hover,.avatar-crop-management #avatar-crop-actions a.avatar-crop-cancel:hover {color:#007CFF;}.bb-single-album-header .document-breadcrumb li a:hover{color:#007CFF;}#buddypress .bp-navs.bb-bp-tab-nav .current a,#buddypress .bp-navs.bb-bp-tab-nav .selected a,#buddypress .bp-navs.bb-bp-tab-nav .current a:focus,#buddypress .bp-navs.bb-bp-tab-nav .selected a:focus,#buddypress .bp-navs.bb-bp-tab-nav .current a:hover,#buddypress .bp-navs.bb-bp-tab-nav .selected a:hover,#buddypress .bp-search-results-wrapper .bp-navs .current a,#buddypress .bp-search-results-wrapper .bp-navs .selected a,#item-body #group-invites-container .bp-navs.group-subnav .current a,#item-body #group-invites-container .bp-navs.group-subnav .selected a,#buddypress .profile.edit .button-nav .current a,.groups.group-create .buddypress-wrap .group-create-buttons li.current a,.buddypress-wrap .bp-subnavs ul #bp-zoom-switch-type > a.zoom_active,#group-messages-container .bp-navs.group-subnav li.selected a {color:#122B46;}.groups.group-create .buddypress-wrap .group-create-buttons li:not(:last-child) a:after {background-color:#122B46;}body.invites.has-sidebar #buddypress .bp-settings-container .bp-navs .selected a,#buddypress .profile.edit .button-nav .current a,#group-messages-container .bp-navs.group-subnav li.selected {border-bottom-color:#007CFF;}#buddypress .register-section .visibility-toggle-link,#buddypress .profile.edit .visibility-toggle-link,.thread-to a,.bp-messages-content #bp-message-thread-list .message-metadata .user-link,.widget.activity_update .activity-update p a:not(.activity-time-since),.bp-activity-huddle a.activity-post-user-name,.pc_detailed_progress_wrap .single_section_wrap.completed .section_name a {color:#122B46;}#buddypress .register-section .visibility-toggle-link:hover,#buddypress .profile.edit .visibility-toggle-link:hover,.thread-to a:hover,.bp-messages-content #bp-message-thread-list .message-metadata .user-link:hover,.widget.activity_update .activity-update p a:not(.activity-time-since):hover,.bp-activity-huddle a.activity-post-user-name:hover {color:#007CFF;}#buddypress #header-cover-image.has-default,#buddypress #header-cover-image.has-default .guillotine-window img,.bs-group-cover.has-default a {background-color:#ffffff;}body #buddypress div#item-header-cover-image h2,.groups.group-create .buddypress-wrap .bp-invites-content #members-list .list-title,#item-body #group-invites-container .bp-invites-content .list-title,.bp-messages-content .thread-participants,#buddypress .profile.edit > #profile-edit-form fieldset .editfield legend {color:#122B46;}.item-list.groups-list .list-wrap,.item-list.bp-search-results-list .list-wrap,#item-body > div.profile,.activity-update-form #whats-new-textarea textarea,.bb-bp-settings-container {background:#FFFFFF;}#buddypress .groups-manage-members-list .item-list > li,#item-body #group-invites-container .bp-invites-content .item-list > li,.bp-messages-content #bp-message-thread-list li,.groups.group-create .buddypress-wrap .bp-invites-content #members-list li,#friend-list.item-list .list-wrap,.zoom-meeting-block,.media.document-parent,#group-settings-form #request-list li,.bp-messages-content #bp-message-content .medium-editor-toolbar {background-color:#FFFFFF;}@media screen and (min-width:768px) {.groups.group-create .buddypress-wrap #group-create-tabs.tabbed-links .group-create-buttons li.current {background-color:#FFFFFF;}}.buddypress-wrap .bp-tables-report {box-shadow:0 0 0 1px #E7E9EC;}body.buddypress.register.login-split-page .login-split .split-overlay,body.buddypress.activation.login-split-page .login-split .split-overlay {opacity:0.3;}body.buddypress.register .register-section-logo img,body.buddypress.activation .activate-section-logo img {width:180px;}.buddypress-wrap nav#object-nav.horizontal.group-nav-tabs ul li.selected,.buddypress-wrap nav#object-nav.horizontal.user-nav-tabs ul li.selected {background-color:#FAFBFD;}.buddypress-wrap nav#object-nav.horizontal.group-nav-tabs ul li.selected a,.buddypress-wrap nav#object-nav.horizontal.user-nav-tabs ul li.selected a,body:not(.group-admin):not(.group-invites) .buddypress-wrap .group-subnav.tabbed-links ul.subnav li.selected,body:not(.group-admin):not(.group-invites) .buddypress-wrap .user-subnav.tabbed-links ul.subnav li.selected,.buddypress-wrap .user-subnav.tabbed-links ul.subnav li.selected {border-bottom-color:#FAFBFD;}
+            </style>
+            
+            <style id="buddyboss_theme-learndash-style">
+                .learndash-wrapper .bb-ld-tabs #learndash-course-content {top:-118px;}.wpProQuiz_content .wpProQuiz_results .quiz_continue_link a#quiz_continue_link {background: #007CFF;}.wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion > ol li.wpProQuiz_reviewQuestionTarget,.wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion > ol li.wpProQuiz_reviewQuestionTarget.wpProQuiz_reviewQuestionSolved,.wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion > ol li.wpProQuiz_reviewQuestionTarget.wpProQuiz_reviewQuestionReview,.wpProQuiz_content .wpProQuiz_box > ol li.wpProQuiz_reviewQuestionTarget,.wpProQuiz_content .wpProQuiz_box > ol li.wpProQuiz_reviewQuestionTarget.wpProQuiz_reviewQuestionSolved,.wpProQuiz_content .wpProQuiz_box > ol li.wpProQuiz_reviewQuestionTarget.wpProQuiz_reviewQuestionReview,.wpProQuiz_content .wpProQuiz_resultTable table tr:nth-child(2) td:first-child:before,.wpProQuiz_sending dd.course_progress div.course_progress_blue,.wpProQuiz_content .wpProQuiz_resultTable table tr:nth-child(2) td:first-child:before,.wpProQuiz_sending dd.course_progress div.course_progress_blue,.lms-topic-sidebar-progress .course-progress-bar,.bb-sfwd-aside.bb-dark-theme .lms-lesson-item.current > a .i-progress.i-progress-completed,.bb-sfwd-aside.bb-dark-theme .lms-topic-item.current > a .i-progress.i-progress-completed,.bb-sfwd-aside.bb-dark-theme .lms-quiz-item.current .i-progress.i-progress-completed,.wpProQuiz_content ul.wpProQuiz_questionList[data-type='matrix_sort_answer'] li ul.wpProQuiz_maxtrixSortCriterion li.wpProQuiz_sortStringItem.ui-sortable-helper,.wpProQuiz_content .wpProQuiz_matrixSortString .wpProQuiz_sortStringList.ui-sortable li.wpProQuiz_sortStringItem.ui-sortable-helper,.i-progress.i-progress-completed,.learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-progress,.learndash-wrapper .ld-status-icon.ld-quiz-complete,.wpProQuiz_content .wpProQuiz_questionList[data-type='essay'] form input[type=file] + label,.learndash-wrapper .wpProQuiz_content input[type=radio].wpProQuiz_questionInput.bbstyled:checked + span:after,.learndash-wrapper .wpProQuiz_content input[type=checkbox].wpProQuiz_questionInput.bbstyled:checked + span,.learndash-wrapper .wpProQuiz_content .wpProQuiz_time_limit .wpProQuiz_progress,.ld-modal.ld-login-modal .ld-login-modal-form input[type='submit'],#learndash-page-content .sfwd-course-nav .learndash_next_prev_link a:hover,.wpProQuiz_questionList[data-type="assessment_answer"] .wpProQuiz_questionListItem label.is-selected:before,.wpProQuiz_questionList[data-type="single"] .wpProQuiz_questionListItem label.is-selected:before,.wpProQuiz_questionList[data-type="multiple"] .wpProQuiz_questionListItem label.is-selected:before {background-color: #007CFF;}.group_courses ul.courses-group-list .bp-learndash-progress-bar progress::-moz-progress-bar {background-color: #007CFF;}.learndash-complete .ld-item-list-item-expanded .ld-table-list-items .ld-table-list-item .ld-table-list-item-quiz .ld-quiz-complete,.group_courses ul.courses-group-list .bp-learndash-progress-bar progress::-webkit-progress-value {background-color: #007CFF;}.wpProQuiz_content .wpProQuiz_button2,.bb_progressbar_label,.wpProQuiz_content .wpProQuiz_questionList[data-type='essay'] form input[type=submit],.lms-topic-sidebar-wrapper .lms-links ul li a,.lms-topic-sidebar-wrapper .lms-links ul li a:hover,#learndash-page-content .ld-focus-comments .ld-expand-button.ld-button-alternate,#learndash-page-content .ld-focus-comments .ld-comment-avatar .ld-comment-avatar-author a.ld-comment-permalink,#learndash-page-content .ld-focus-comments .form-submit #submit,.widget_ldcoursenavigation .learndash-wrapper .ld-course-navigation-actions .ld-expand-button.ld-button-alternate,.ld-sidebar-widgets li.widget .widgettitle a {color: #007CFF;}.wpProQuiz_content .wpProQuiz_button2,.wpProQuiz_content .wpProQuiz_questionList[data-type='essay'] form input[type=submit],.wpProQuiz_content ul.wpProQuiz_questionList[data-type='matrix_sort_answer'] li ul.wpProQuiz_maxtrixSortCriterion li.wpProQuiz_sortStringItem.ui-sortable-helper,.wpProQuiz_content .wpProQuiz_matrixSortString .wpProQuiz_sortStringList.ui-sortable li.wpProQuiz_sortStringItem.ui-sortable-helper,.bb-progress .bb-progress-circle,.bb-sfwd-aside.bb-dark-theme .bb-progress .bb-progress-circle,.lms-topic-sidebar-wrapper .lms-links ul li a,.learndash-wrapper .wpProQuiz_content input[type=checkbox].wpProQuiz_questionInput.bbstyled:checked + span,.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label.is-selected,.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label:focus-within,#learndash-page-content .ld-focus-comments .comment .ld-comment-avatar > img,#learndash-page-content .ld-focus-comments .form-submit #submit,.wpProQuiz_questionList[data-type="multiple"] .wpProQuiz_questionListItem label.is-selected:before {border-color: #007CFF;}.bb-course-video-overlay .bb-course-play-btn:hover:after {border-color: transparent transparent transparent#007CFF;}.learndash-wrapper .ld-loading::before {border-top-color:#007CFF;}.quiz_progress_container #quiz_shape_progress {stroke:#007CFF;}.ld-modal.ld-login-modal.ld-can-register .ld-login-modal-register {background-color:#007CFF;}.bb-quiz-list .bb-quiz-icon g {stroke:#4D5C6D;}.learndash_next_prev_link a,#buddypress ul.courses-group-list .course-link a.button,.learndash-wrapper .ld-pagination .ld-pages a,.learndash-wrapper #ld-profile .ld-item-list-item-expanded .ld-table-list .ld-table-list-item-preview .ld-table-list-title a {color:#122B46;}.learndash_next_prev_link a:hover,#buddypress ul.courses-group-list .course-link a.button:hover,.learndash-wrapper .ld-pagination .ld-pages a:hover,.learndash-wrapper #ld-profile .ld-item-list-item-expanded .ld-table-list .ld-table-list-item-preview .ld-table-list-title a:hover,#certificate_list .bb-certificate-title a:hover {color:#007CFF;}.bb-lesson-head,.bb-about-instructor h5 a,.bb_profile_course_wrapper a,#quiz_progress_details p a,.lms-topic-sidebar-wrapper .lms-lessions-list > ol li a.bb-lesson-head,.learndash_course_content .bb-lessons-list li a.bb-lesson-head,.learndash_course_content .bb-quiz-list a,.bb-type-list.bb-lms-list-inside a,.bb-quiz-list a,.lms-topic-sidebar-wrapper .lms-course-members-list .course-members-list a,.lms-topic-sidebar-wrapper .group-exec-list a .lms-group-lead span:first-child,.lms-topic-sidebar-wrapper .lms-group-flag .lms-group-heading a span,.lms-topic-sidebar-wrapper .course-group-list a,.learndash-wrapper .ld-alert .ld-alert-content a {color:#122B46;}.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview:hover .ld-topic-title:before,.learndash-wrapper .ld-item-list-item-expanded .ld-table-list-items .ld-table-list-item .ld-table-list-item-quiz .ld-table-list-item-preview:hover .ld-item-title,.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview:hover .ld-topic-title,.learndash-wrapper .learndash_content_wrap .ld-table-list-item-quiz:hover .ld-item-title,.learndash-wrapper .ld-item-list .ld-item-list-item.ld-item-lesson-item .ld-item-list-item-preview:hover .ld-item-name .ld-item-title .ld-item-components span,.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-list-item-preview:hover a.ld-item-name .ld-item-title,.bb-course-meta strong a:hover,.bb-lesson-head:hover,.bb-about-instructor h5 a:hover,.bb_profile_course_wrapper a:hover,#quiz_progress_details p a:hover,.lms-topic-sidebar-wrapper .lms-lessions-list > ol li a.bb-lesson-head:hover,.learndash_course_content .bb-lessons-list li a.bb-lesson-head:hover,.learndash_course_content .bb-quiz-list a:hover,.bb-type-list.bb-lms-list-inside a:hover,.bb-quiz-list a:hover,.group_courses ul.courses-group-list .course-name a:hover,.lms-header-instructor .bb-about-instructor h5 a:hover,.lms-topic-sidebar-wrapper .lms-course-members-list .course-members-list a:hover,.lms-topic-sidebar-wrapper .group-exec-list a:hover .lms-group-lead span:first-child,.lms-topic-sidebar-wrapper .lms-group-flag .lms-group-heading a:hover span,.lms-topic-sidebar-wrapper .course-group-list a:hover,.learndash-wrapper .bb-ld-info-bar .ld-breadcrumbs .ld-breadcrumbs-segments span a:hover,.bb-course-meta strong a:hover,.learndash-wrapper .ld-alert .ld-alert-content a:hover {color:#007CFF;}.bb-course-categories,.lms-topic-sidebar-instructor .bb-about-instructor > h4,.learndash-wrapper .ld-item-list.ld-lesson-list .ld-lesson-section-heading,.learndash-wrapper #ld-profile .ld-profile-summary .ld-profile-stats .ld-profile-stat strong,.bb-course-footer,.learndash-wrapper .ld-login-modal .ld-login-modal-form label,.learndash-wrapper .ld-login-modal .ld-login-modal-login .ld-modal-heading {color:#122B46;}.group_courses ul.courses-group-list li.item-entry .item-avatar > a {background:#ffffff;}.wpProQuiz_content .wpProQuiz_catOverview span,.group_courses ul.courses-group-list li.item-entry .list-wrap {background-color:#FFFFFF;}.bb-single-course-sidebar a.btn-advance,.learndash-wrapper .bb-single-course-sidebar .ld-status,.learndash-wrapper .learndash_content_wrap .learndash_mark_complete_button,.bb-single-course-sidebar .btn-join, .bb-single-course-sidebar #btn-join,.lms-topic-sidebar-course-navigation a.course-entry-link {border-radius:100px;}
+            </style>
+            
+		<style id="buddyboss_theme-custom-style">
+
+		a.bb-close-panel i {top:21px;}
+		</style>
+		<style id="learndash-focus-mode-style">.ld-in-focus-mode .learndash-wrapper .learndash_content_wrap{max-width: inherit}.ld-in-focus-mode .learndash-wrapper .bb-lms-header .lms-header-title, .ld-in-focus-mode .learndash-wrapper .bb-lms-header .lms-header-instructor{max-width: inherit}.ld-in-focus-mode.single #learndash-course-header{max-width: inherit}</style>		<style type="text/css" id="wp-custom-css">
+			.woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--payment-methods a:before {
+    content: '\ee6e';
+    font-family: bb-icons;
+}
+.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview span.ld-topic-title.video_topic_enabled:before {
+    content: '\eef7';
+    border: 1px solid;
+    font-size: 13px;
+}
+		</style>
+		<style id="buddyboss_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">.site-header .site-title{font-family:"SF UI Text";font-weight:normal;font-style:normal;font-size:30px;font-display:swap;}body{font-family:"SF UI Text";font-weight:normal;font-style:normal;font-size:16px;font-display:swap;}h1{font-family:"SF UI Display";font-weight:700;font-style:normal;font-size:34px;font-display:swap;}h2{font-family:"SF UI Display";font-weight:700;font-style:normal;font-size:24px;font-display:swap;}h3{font-family:"SF UI Display";font-weight:500;font-style:normal;font-size:20px;font-display:swap;}h4{font-family:"SF UI Display";font-weight:500;font-style:normal;font-size:18px;font-display:swap;}h5{font-family:"SF UI Display";font-weight:500;font-style:normal;font-size:16px;font-display:swap;}h6{font-family:"SF UI Display";font-weight:500;font-style:normal;font-size:12px;font-display:swap;}</style><style>.widget_text .kk_footer_menu li a{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+.widget.widget_follow_us .bb-follow-links a {
+    opacity: 1;
+}
+.footer-widget-area .footer-widget .widget_follow_us .bb-follow-links a i {
+    font-size: 30px;
+    color: #fff;
+}
+.bb-footer .widget li {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.bb-footer {
+    padding: 30px 0 0;
+}
+.footer-bottom {
+    background-color: #364367;
+}
+/*mini ornage and code syntax conflict fix*/
+code .number {
+    background: #fff;
+}
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area {
+    max-width:80px;
+}
+
+/*remove footer on puzzle page*/
+body.page-id-593420 .footer-widget-area, body.page-id-593420 .footer-bottom{
+	display: none;
+}
+
+div.bb-lms-header .bb-position {
+	margin-bottom:10px;
+}
+.start-lab-button .bb-icon-play {
+    display: none;
+}
+div#primary-navbar {
+    float: right;
+}
+.bb-members-list__item .bb-members-list__avatar img{
+    max-width: 40px;
+}
+.learndash_content_wrap .ld-tabs-content {
+    margin-bottom: 0px;
+}
+.learndash-wrapper .learndash_mark_complete_button:disabled {
+    background: #00a2e8 !important;
+    filter: none;
+}
+.footer-widget-area .footer-widget .widget_follow_us .bb-follow-links a i {
+    font-size: 30px;
+}
+.lms-lesson-item.current>.bb-lesson-head,
+.lms-quiz-item.current>.bb-lms-title-wrap,
+.lms-topic-item.current>.bb-lms-title-wrap {
+    background: rgba(146,164,183,0.2);
+}
+/*Checkout page*/
+.termcondition {
+    font-size: 13px;
+}
+.wooprivacy {
+    font-size: 13px;
+    line-height: 1.5;
+	  text-align: left;
+}.place-order button {
+    float: none !important;
+    border-radius: 5px !important;
+}.place-order {
+    text-align: center;
+}
+.kk_short_description p {
+    padding: 10px 25px 0px 25px !important;
+}
+tr.order-total.recurring-total, tr.order-total.recurring-total th {
+    font-size: 12px !important;
+}
+@media screen and (max-width: 780px) {
+    .bb-course-banner-info.container.bb-learndash-side-area {
+     width: auto !important; 
+}
+}</style><meta name=generator content='Memberium v2.203 for WordPress' /><link title="Membership site system for WordPress and Keap" type="text/html" rel="help" hreflang="en" href="https://Memberium.com" />
+
+	</head>
+
+	<body class="home-page bp-nouveau home page-template page-template-page-templates page-template-homepage-q2-2022 page-template-page-templateshomepage-q2-2022-php page page-id-638385 logged-in wp-custom-logo buddyboss-theme bb-template-v1 buddypanel-logo-off  header-style-1  menu-style-standard sticky-header bp-search no-js learndash-theme">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXS9M3C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		
+		<div id="page" class="site">
+
+			
+			<header id="masthead" class="site-header site-header--bb">
+				<div class="container site-header-container flex default-header">
+    <a href="#" class="bb-toggle-panel"><i class="bb-icon-l bb-icon-sidebar"></i></a>
+    
+<div id="site-logo" class="site-branding ">
+	<div class="site-title">
+		<a href="https://kodekloud.com/" rel="home">
+			<img width="1" height="1" src="https://kodekloud.com/wp-content/uploads/2020/09/KodeKloud_logo2-1.svg" class="bb-logo" alt="" loading="lazy" />		</a>
+	</div>
+</div>	<nav id="site-navigation" class="main-navigation" data-menu-space="120">
+		<div id="primary-navbar">
+			<ul id="primary-menu" class="primary-menu bb-primary-overflow"><li id="menu-item-2554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2554 no-icon"><a href="https://kodekloud.com/dashboard/"><span>Dashboard</span></a></li>
+<li id="menu-item-449354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449354 no-icon"><a href="https://kodekloud.com/business/"><span>Business</span></a></li>
+<li id="menu-item-2149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2149 no-icon"><a href="https://kodekloud.com/pricing/"><span>Pricing</span></a></li>
+<li id="menu-item-262950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262950 no-icon"><a href="https://kodekloud.com/playgrounds/"><span>Playgrounds</span></a></li>
+<li id="menu-item-25816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-25816 no-icon"><a href="https://kodekloud.com/learning-path-devops-basics/"><span>Learning Paths</span></a>
+<div class='wrapper ab-submenu'><ul class='bb-sub-menu'>
+	<li id="menu-item-177252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177252 no-icon"><a href="https://kodekloud.com/learning-path-devops-basics/"><span>DevOps Basics</span></a></li>
+	<li id="menu-item-177255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177255 no-icon"><a href="https://kodekloud.com/learning-path-docker/"><span>Docker</span></a></li>
+	<li id="menu-item-177261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177261 no-icon"><a href="https://kodekloud.com/learning-path-kubernetes/"><span>Kubernetes</span></a></li>
+	<li id="menu-item-613595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613595 no-icon"><a href="https://kodekloud.com/learning-path-linux/"><span>Linux</span></a></li>
+	<li id="menu-item-177258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177258 no-icon"><a href="https://kodekloud.com/learning-path-infrastructure-as-code/"><span>Infrastructure as Code</span></a></li>
+	<li id="menu-item-177264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177264 no-icon"><a href="https://kodekloud.com/learning-path-programming/"><span>Programming</span></a></li>
+	<li id="menu-item-4250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4250 no-icon"><a href="/courses"><span><b>All Courses</b></span></a></li>
+</ul></div>
+</li>
+<li id="menu-item-709546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-709546 no-icon"><a href="#"><span>Resources</span></a>
+<div class='wrapper ab-submenu'><ul class='bb-sub-menu'>
+	<li id="menu-item-169302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169302 no-icon"><a target="_blank" rel="noopener noreferrer" href="https://kodekloud.com/tutorials/"><span>Blogs</span></a></li>
+	<li id="menu-item-69094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69094 no-icon"><a target="_blank" rel="noopener noreferrer" href="https://community.kodekloud.com"><span>Forum</span></a></li>
+</ul></div>
+</li>
+<li id="menu-item-177321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-177321 no-icon"><a href="https://kodekloud.com/about-us/"><span>About Us</span></a>
+<div class='wrapper ab-submenu'><ul class='bb-sub-menu'>
+	<li id="menu-item-3829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3829 no-icon"><a href="https://kodekloud.com/contact-us/"><span>Contact Us</span></a></li>
+</ul></div>
+</li>
+<li id="menu-item-415433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-415433 no-icon"><a target="_blank" rel="noopener noreferrer" href="https://kodekloud.com/kodekloud-engineer"><span>Kodekloud Engineer</span></a></li>
+</ul>			<div id="navbar-collapse">
+				<a class="more-button" href="#"><i class="bb-icon-f bb-icon-ellipsis-h"></i></a>
+				<div class="sub-menu">
+					<div class="wrapper">
+						<ul id="navbar-extend" class="sub-menu-inner"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+		
+<div id="header-aside" class="header-aside name_and_avatar">
+    <div class="header-aside-inner">
+
+                            <a href="#" class="header-search-link" data-balloon-pos="down" data-balloon="Search"><i class="bb-icon-l bb-icon-search"></i></a>
+                    <span class="bb-separator"></span>
+                                <div class="user-wrap user-wrap-container">
+                    <a class="user-link" href="/dashboard/">
+                        <span class="user-name">My Account</span></i>
+                    </a>
+                </div>
+            
+    </div><!-- .header-aside-inner -->
+</div><!-- #header-aside -->
+</div>
+<div class="bb-mobile-header-wrapper bb-single-icon">
+	<div class="bb-mobile-header flex align-items-center">
+		<div class="bb-left-panel-icon-wrap">
+			<a href="#" class="push-left bb-left-panel-mobile"><i class="bb-icon-l bb-icon-bars"></i></a>
+		</div>
+
+		<div class="flex-1 mobile-logo-wrapper">
+			
+			<div class="site-title">
+
+				<a href="https://kodekloud.com/" rel="home">
+					<img width="1" height="1" src="https://kodekloud.com/wp-content/uploads/2020/09/KodeKloud_logo2.svg" class="bb-mobile-logo" alt="" loading="lazy" />				</a>
+
+			</div>
+		</div>
+		<div class="header-aside">
+					</div>
+	</div>
+
+	<div class="header-search-wrap">
+		<div class="container">
+			
+<form role="search" method="get" class="search-form" action="https://kodekloud.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field-top" placeholder="Search" value="" name="s" />
+	</label>
+</form>
+			<a data-balloon-pos="left" data-balloon="Close" href="#" class="close-search"><i class="bb-icon-l bb-icon-times"></i></a>
+		</div>
+	</div>
+</div>
+
+<div class="bb-mobile-panel-wrapper left light closed">
+	<div class="bb-mobile-panel-inner">
+		<div class="bb-mobile-panel-header">
+							<div class="user-wrap">
+					<a href="https://kodekloud.com/members/aadhaar-koul/"><img alt="" src="https://lh3.googleusercontent.com/a-/AOh14Ghui_4ikkSZSy5PP4YvAcz-nJ1OGX2k8LQuH5nQIw=s96-c" class="avatar apsl-avatar-social-login avatar-100 photo" height="100" width="100" /></a>
+					<div>
+						<a href="https://kodekloud.com/members/aadhaar-koul/">
+							<span class="user-name">My Account</span>
+						</a>
+													<div class="my-account-link"><a class="ab-item" aria-haspopup="true" href="https://kodekloud.com/members/aadhaar-koul/settings/">My Account</a></div>
+												</div>
+				</div>
+						<a href="#" class="bb-close-panel"><i class="bb-icon-l bb-icon-times"></i></a>
+		</div>
+
+		<nav class="main-navigation" data-menu-space="120">
+			<ul id="menu-main-menu" class="bb-primary-menu mobile-menu buddypanel-menu side-panel-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2554"><a href="https://kodekloud.com/dashboard/">Dashboard</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449354"><a href="https://kodekloud.com/business/">Business</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2149"><a href="https://kodekloud.com/pricing/">Pricing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262950"><a href="https://kodekloud.com/playgrounds/">Playgrounds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-25816"><a href="https://kodekloud.com/learning-path-devops-basics/">Learning Paths</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177252"><a href="https://kodekloud.com/learning-path-devops-basics/">DevOps Basics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177255"><a href="https://kodekloud.com/learning-path-docker/">Docker</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177261"><a href="https://kodekloud.com/learning-path-kubernetes/">Kubernetes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613595"><a href="https://kodekloud.com/learning-path-linux/">Linux</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177258"><a href="https://kodekloud.com/learning-path-infrastructure-as-code/">Infrastructure as Code</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177264"><a href="https://kodekloud.com/learning-path-programming/">Programming</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4250"><a href="/courses"><b>All Courses</b></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-709546"><a href="#">Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169302"><a target="_blank" rel="noopener" href="https://kodekloud.com/tutorials/">Blogs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69094"><a target="_blank" rel="noopener" href="https://community.kodekloud.com">Forum</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-177321"><a href="https://kodekloud.com/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3829"><a href="https://kodekloud.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-415433"><a target="_blank" rel="noopener" href="https://kodekloud.com/kodekloud-engineer">Kodekloud Engineer</a></li>
+</ul>		</nav>
+
+	</div>
+</div>
+<div class="header-search-wrap">
+	<div class="container">
+		
+<form role="search" method="get" class="search-form" action="https://kodekloud.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field-top" placeholder="Search..." value="" name="s" />
+	</label>
+</form>
+		<a href="#" class="close-search"><i class="bb-icon-l bb-icon-times"></i></a>
+	</div>
+</div>			</header>
+
+			
+			
+			<div id="content" class="site-content">
+
+				
+				<div class="container">
+					<div class="bb-grid site-content-grid">
+</div>
+</div>
+</div>
+
+<div class="kk-page homepage-q2-2022">
+    <section class="kk-section kk-video-text hero video-right bg-white">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-video">
+            <div class="kk-video">
+                            <video
+                    class="lazy"
+                    poster="https://kodekloud.com/wp-content/uploads/2022/05/hompega_pic-1-1.png"
+                                    loop
+                    autoplay
+                    muted
+                    playsinline
+                    style="transform: scale(1.5)"
+                    controlslist="nodownload">
+                <source
+                        data-src="https://kodekloud.com/wp-content/uploads/2021/11/animation-1.mp4"
+                        type="video/mp4">
+            </video>
+            <script type="text/javascript">
+                if(!window.KKaddedLazyLoadVideoOnLoadEventHandler) {
+                    window.KKaddedLazyLoadVideoOnLoadEventHandler = true;
+                    document.addEventListener("DOMContentLoaded", function() {
+
+                        var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+                        if ("IntersectionObserver" in window) {
+                            var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+                                entries.forEach(function(video) {
+                                    if (video.isIntersecting) {
+                                        for (var source in video.target.children) {
+                                            var videoSource = video.target.children[source];
+                                            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                                videoSource.src = videoSource.dataset.src;
+                                            }
+                                        }
+
+                                        video.target.load();
+                                        video.target.classList.remove("lazy");
+                                        lazyVideoObserver.unobserve(video.target);
+                                    }
+                                });
+                            });
+
+                            lazyVideos.forEach(function(lazyVideo) {
+                                lazyVideoObserver.observe(lazyVideo);
+                            });
+                        }
+                    });
+                }
+            </script>
+        
+    
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h1 class="kk-title primary green"><h1>DevOps Courses: <span>Become a DevOps</span> Expert Through Our Learn-By-Doing Platform</h1></h1>
+
+<div class="kk-text">KodeKloud helps you build a successful DevOps career through the best DevOps courses available. Whether you are an absolute beginner or a seasoned specialist, our courses and hands-on labs will give you the tools and confidence to excel at your new DevOps job.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/join-kodekloud-free/"            class="kk-button blue-green"><span>START FREE</span></a>
+                            <a href="https://kodekloud.com/business"            class="kk-button green-frame"><span>KODEKLOUD FOR BUSINESS</span></a>
+        </div>            </div>
+<!--            <div class="circle-bg"></div>-->
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text bg-default">
+        <div class="container">
+            <div class="kk-icon-features center pipes">
+    <ul>
+                    <li>
+                <div class="icon book-purple">
+    <div class="svg"></div>
+</div>                <div class="content">
+                    <div class="title">31+</div>
+                    <div class="description">Courses</div>
+                </div>
+            </li>
+                    <li>
+                <div class="icon monitor-purple">
+    <div class="svg"></div>
+</div>                <div class="content">
+                    <div class="title">200+</div>
+                    <div class="description">Hands-on labs</div>
+                </div>
+            </li>
+                    <li>
+                <div class="icon team-purple">
+    <div class="svg"></div>
+</div>                <div class="content">
+                    <div class="title">500000+</div>
+                    <div class="description">Students</div>
+                </div>
+            </li>
+                    <li>
+                <div class="icon star-purple">
+    <div class="svg"></div>
+</div>                <div class="content">
+                    <div class="title">4.8</div>
+                    <div class="description">Rating</div>
+                </div>
+            </li>
+            </ul>
+</div>
+        </div>
+    </section>
+    <section class="companies">
+    <div class="container">
+        <h2>OUR STUDENTS WORK AT...</h2>
+        <div class="logos slick">
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo8.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo6.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo5.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo1.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo2.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/Apple_logo_black-1.png" alt="" />
+                </div>
+                            <div class="logo">
+                    <img src="https://kodekloud.com/wp-content/uploads/2022/02/logo3.png" alt="" />
+                </div>
+                    </div>
+    </div>
+</section>
+<script type="text/javascript">
+    jQuery(function($){
+        $('.companies .slick').slick({
+            infinite: true,
+            slidesToShow: 5,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ],
+            prevArrow: '<img src="/wp-content/themes/buddyboss-theme-child/assets/images/arrow-right.svg" class="arrow-prev" />',
+            nextArrow: '<img src="/wp-content/themes/buddyboss-theme-child/assets/images/arrow-right.svg" class="arrow-next" />',
+        });
+    })
+</script>    <section class="kk-section kk-image-text why-us image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/git-course-1-3.gif" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>WE'RE OBSESSED</span> WITH MAKING YOUR DEVOPS COURSE  LEARNING EXPERIENCE AMAZING</h2>
+
+<div class="kk-text">We didn’t design our DevOps online training courses to share our skills, but to ensure you can acquire them too! There’s a big difference between the two. You’ve probably seen DevOps courses taught by experts. But the learning experience isn’t good. Being an expert doesn’t always mean being a great teacher.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/join-kodekloud-free/"            class="kk-button blue-green"><span>START FREE</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>
+    <section class="kk-section kk-awards">
+    <div class="container">
+        <div class="awards">
+                            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/2021-fin-white-TR-1.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/ewd.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/2021-fin-white-CT-1.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                    </div>
+        <div class="linux">
+            <div class="images">
+                                <div class="image">
+                    <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/04/certified-sp.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                </div>
+                                <div class="image">
+                    <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/04/training-partner.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                </div>
+                            </div>
+            
+
+<div class="kk-text">KodeKloud is a Linux foundation certified Kubernetes training partner and a certified service provider </div>        </div>
+    </div>
+</section>    <section class="kk-big-image-features kk-section style-default single-media">
+    <div class="bg-brackets left"></div>
+    <div class="bg-brackets right"></div>
+    <div class="container">
+        <h2 class="kk-title secondary white">DON'T JUST LEARN THEORY, LEARN BY DOING AND GETTING INSTANT FEEDBACK</h2>        <div class="menu">
+            <ul>
+                            <li class="menu-item menu-item-1 selected" data-index="1">
+                    <div class="name">Real Environment</div>
+                    <div class="icon window-white">
+    <div class="svg"></div>
+</div>                </li>
+                            <li class="menu-item menu-item-2 " data-index="2">
+                    <div class="name">In-Browser</div>
+                    <div class="icon browser-white">
+    <div class="svg"></div>
+</div>                </li>
+                            <li class="menu-item menu-item-3 " data-index="3">
+                    <div class="name">Challenging</div>
+                    <div class="icon peak-white">
+    <div class="svg"></div>
+</div>                </li>
+                            <li class="menu-item menu-item-4 " data-index="4">
+                    <div class="name">Fun</div>
+                    <div class="icon communication-white">
+    <div class="svg"></div>
+</div>                </li>
+                        </ul>
+        </div>
+        <div class="images">
+                            <div class="kk-media">
+            <div class="kk-video">
+                            <video
+                    class="lazy"
+                    poster="https://kodekloud.com/wp-content/uploads/2022/05/Screenshot-at-May-04-18-12-31.jpg"
+                                    loop
+                    autoplay
+                    muted
+                    playsinline
+                    style="transform: scale(1)"
+                    controlslist="nodownload">
+                <source
+                        data-src="https://kodekloud.com/wp-content/uploads/2022/05/lab-demo-video-main-60fps.mp4"
+                        type="video/mp4">
+            </video>
+            <script type="text/javascript">
+                if(!window.KKaddedLazyLoadVideoOnLoadEventHandler) {
+                    window.KKaddedLazyLoadVideoOnLoadEventHandler = true;
+                    document.addEventListener("DOMContentLoaded", function() {
+
+                        var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+                        if ("IntersectionObserver" in window) {
+                            var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+                                entries.forEach(function(video) {
+                                    if (video.isIntersecting) {
+                                        for (var source in video.target.children) {
+                                            var videoSource = video.target.children[source];
+                                            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                                videoSource.src = videoSource.dataset.src;
+                                            }
+                                        }
+
+                                        video.target.load();
+                                        video.target.classList.remove("lazy");
+                                        lazyVideoObserver.unobserve(video.target);
+                                    }
+                                });
+                            });
+
+                            lazyVideos.forEach(function(lazyVideo) {
+                                lazyVideoObserver.observe(lazyVideo);
+                            });
+                        }
+                    });
+                }
+            </script>
+        
+    
+</div>    </div>                    </div>
+    </div>
+        <script type="text/javascript">
+        jQuery(function($){
+            $('.kk-big-image-features:not(.single-media) .menu .menu-item').on('click', function(){
+                const $this = $(this);
+                const index = $this.data('index');
+                const $parent = $this.closest('.kk-big-image-features');
+                $parent.find('.menu-item.selected').removeClass('selected');
+                $parent.find('.image.selected').removeClass('selected');
+                $parent.find('.menu-item-' + index).addClass('selected');
+                $parent.find('.images .image-' + index).addClass('selected');
+
+            })
+        });
+    </script>
+</section>    <section class="kk-section kk-image-text playgrounds image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/Group-20921-1.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>CLOUD & DEVOPS</span> PLAYGROUNDS WITH KODEKLOUD PRO</h2>
+
+<div class="kk-text">KodeKloud Pro includes everything you’d get in the Standard Plan (all 31+ DevOps online training courses and 200+ labs). But unlike the Standard Plan, our Pro plan gives you access to KodeKloud Engineer Pro and Playgrounds that let you test and play around with pre-built solutions, such as:<br />
+<br />
+<ul class="kk-bullets"><li>Cloud environments like AWS, Azure, or GCP<br />
+</li><li>A Docker server<br />
+</li><li>A Kubernetes cluster<br />
+</li><li>An Istio setup<br />
+</li></ul><br />
+Our hands-on labs are limited by both time and the topic. Playgrounds in KodeKloud Pro are blank, clean environments intended for you to tinker with. Each playground can be extended, giving you all the time you need to test solutions.</div>            <div class="cta">
+                <div class="kk-buttons">
+                </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text all-you-need image-right bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/DevOps-career-1-1-1.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>ALL YOU NEED</span> FOR A SUCCESSFUL DEVOPS CAREER</h2>
+
+<div class="kk-text">KodeKloud includes everything you need to start and advance your DevOps career.  with the best DevOps courses available. We offer 6 hands-on learning paths: DevOps Basics, Docker, Kubernetes, Linux, Infrastructure-as-Code, and Programming.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/pricing/"            class="kk-button blue-green"><span>See Our Plans</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-slick-section kk-testimonials">
+    <div class="container">
+        <h2><h2 class="kk-title secondary purple">WHAT OUR <span>CUSTOMERS</span> SAY</h2></h2>
+        <ul class="testimonials slick">
+                            <li>
+                    <div class="content">
+                        <div class="kk-double-quotes-purple"></div>
+                        <h3 class="title"> Cisco Systems</h3>
+                        <div class="text">
+                            I must say your style of teaching and explaining concepts is amazing. Thank you for developing a course that is totally on point with this exam.                        </div>
+                        <div class="profile">
+                            <div class="image-wrap">
+                                <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/Rahim_Remu-1.jpg" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            </div>
+                            <div class="info">
+                                <div class="name">Rahim Remu</div>
+                                <div class="title"> Network Consulting Engineer</div>
+                                <div class="rating">
+                                    <div class="kk-rating">
+    <div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                            <li>
+                    <div class="content">
+                        <div class="kk-double-quotes-purple"></div>
+                        <h3 class="title"> T-Mobile</h3>
+                        <div class="text">
+                            Passed Certified Kubernetes Application Developer certification test with flying colors. Its 2 hours of intense performance-based test. I took the course by Mumshad Mannambeth. It’s one of the best courses that I have done.                        </div>
+                        <div class="profile">
+                            <div class="image-wrap">
+                                <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/Tata_Avirneni1-1.jpg" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            </div>
+                            <div class="info">
+                                <div class="name">Tata Avirneni</div>
+                                <div class="title"> Software Developer</div>
+                                <div class="rating">
+                                    <div class="kk-rating">
+    <div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                            <li>
+                    <div class="content">
+                        <div class="kk-double-quotes-purple"></div>
+                        <h3 class="title"> </h3>
+                        <div class="text">
+                            I cleared my CKAD exam. I would like to say a BIG THANK YOU for creating the BESTEST course. Your explanation is next level, anyone, without any background can understand your lectures.                        </div>
+                        <div class="profile">
+                            <div class="image-wrap">
+                                <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/Rajith_Navab-1.jpg" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            </div>
+                            <div class="info">
+                                <div class="name">Rajith Navam</div>
+                                <div class="title"> Software Development Engineer</div>
+                                <div class="rating">
+                                    <div class="kk-rating">
+    <div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                            <li>
+                    <div class="content">
+                        <div class="kk-double-quotes-purple"></div>
+                        <h3 class="title"> </h3>
+                        <div class="text">
+                            Finally passed my CKAD exam score i gt was 72. Course is very well designed and presented. There is a practical hand on exercises after each topic! Thank you mumshad for all your support!                         </div>
+                        <div class="profile">
+                            <div class="image-wrap">
+                                <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/Sudhesh_Nair-1.jpg" style="transform: scale(1)" alt="" loading="lazy" />
+</div>                            </div>
+                            <div class="info">
+                                <div class="name">Sudhesh Nair</div>
+                                <div class="title"> Senior IT Consultant</div>
+                                <div class="rating">
+                                    <div class="kk-rating">
+    <div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div><div class="rating-star"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    </ul>
+    </div>
+    <script type="text/javascript">
+        jQuery(function($){
+            $('.kk-testimonials .testimonials.slick:not(.slick-initialized)').slick({
+                infinite: true,
+                slidesToShow: 3,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                autoplaySpeed: 2000,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }, {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }],
+                customPaging : function(slider, i) {
+                    var thumb = jQuery(slider.$slides[i]).data();
+                    return '<a href="javascript:;">•</a>';
+                }
+            });
+        })
+    </script>
+</section>    <section class="big-cta kk-section style-darkblue-gray">
+    <div class="bg-brackets right"></div>
+    <div class="dots-ball-bg"></div>
+    <div class="container">
+        <h2 class="kk-title secondary white">BUILD A DEVOPS DREAM TEAM</h2>
+
+<div class="kk-text">KodeKloud is a game-changer when it comes to business development as well! If you’re a business owner, make sure to check out our KodeKloud for Business plan. We’ve built a DevOps online training solution for businesses to help you train your team and take your company to the next level. </div>            <a href="https://kodekloud.com/business/"            class="kk-button blue-green"><span>KodeKloud for Business</span></a>
+        </div>
+</section>
+    <section class="kk-section kk-image-text up-to-date image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-01.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>WE STRIVE</span> TO ALWAYS BE UP-TO-DATE</h2>
+
+<div class="kk-text">One of the most common issues we see with other DevOps online training platforms is companies abandoning their content. They grow quickly and then stop updating their courses and adding new modules.<br />
+<br />
+We don’t rest on our laurels. We consistently add new courses to our platform, and we work hard to keep our curriculum up to date.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/pricing/"            class="kk-button blue-green"><span>See Our Plans</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text supportive image-right bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-02.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>FRIENDLY & SUPPORTIVE</span> CUSTOMER SERVICE TEAM</h2>
+
+<div class="kk-text">We work hard to guide you through your DevOps journey. That means that if you ever have questions or need help, we’re always here for you. Our approach is very transparent, resulting from our frustration with unethical business practices we’ve seen in the industry.<br />
+<br />
+We will never lock you into unwanted contracts, charge hidden fees, or ignore your complaints. Instead, we´re here to fully support you throughout your DevOps journey.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/join-kodekloud-free/"            class="kk-button blue-green"><span>START FREE</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text community image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-03.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>AN EMPOWERING COMMUNITY</span> OF STUDENTS AND TEACHERS</h2>
+
+<div class="kk-text">Our vibrant Community forum is a big part of our platform. It’s a place where students and professionals come together. Students ask questions, and then our team and other students help them out. We make sure that our community empowers our students. Mutual respect is at the core of our community.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/join-kodekloud-free/"            class="kk-button blue-green"><span>START FREE</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text risk-free image-right bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-04.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>KODEKLOUD</span> IS RISK-FREE!</h2>
+
+<div class="kk-text">You can try out our platform for free. Our free plan is free forever. If you decide to become a KodeKloud Standard or Pro member and get access to all courses and labs, you’ll also get a 30-day money-back guarantee. If you don’t like our DevOps courses for any reason, we will give you a full refund.<br />
+<br />
+We’ve made our platform completely risk-free. That’s because we know the immense value it has. Our students’ feedback and testimonials demonstrate the strong impact KodeKloud has on their careers. Give it a try today!</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/join-kodekloud-free/"            class="kk-button blue-green"><span>START FREE</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-image-text accessible image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-05.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>ACCESSIBLE</span> TO EVERYONE</h2>
+
+<div class="kk-text">There’s a push in the industry to get you to “invest in yourself”. And we agree that you should. But most companies use this phrase to get you to spend more than you need to. Our mission is to provide DevOps online training courses to as many people as possible.<br />
+<br />
+That’s why our plans are highly affordable, regardless of where you’re located. Education is always a good investment, but it’s also essential to get what you pay for. Learning through KodeKloud is the most intelligent investment in your DevOps career you can make. We also offer a free plan that makes it even easier to choose us.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/pricing/"            class="kk-button blue-green"><span>See Our Plans</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section>    <section class="kk-section kk-slick-section kk-team">
+    <div class="container">
+        <h2><h2 class="kk-title secondary purple">OUR <span>TRAINERS</span></h2></h2>
+        <ul class="team slick">
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/mumshad-1.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Mumshad Mannambeth</div>
+                    <div class="title">Founder & CEO of KodeKloud</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/vijin-2.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Vijin Palazhi</div>
+                    <div class="title">Terraform Certified Professional</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/sevi-1-e1642502704962.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Sevi Karakose</div>
+                    <div class="title">Service Mesh with Istio Trainer</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/yogesh-1.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Yogesh Raheja</div>
+                    <div class="title">DevOps, Automation and Cloud Coach and Consultant</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2021/12/lydia-1.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Lydia Hallie</div>
+                    <div class="title">Software Engineer, Technical Instructor</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/02/trainer-Michael-Levan.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Michael Levan</div>
+                    <div class="title">DevOps Researcher, Advisor, & Consultant</div>
+                </div>
+            </li>
+                        <li>
+                <div class="kk-striped-half-ball"></div>
+                <div class="content">
+                    <div class="image-wrap">
+                        <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/04/trainer_template-05.png" style="transform: scale(1.2)" alt="" loading="lazy" />
+</div>                    </div>
+                    <div class="name">Aaron Lockhart</div>
+                    <div class="title">Linux Foundation Certified System Administrator</div>
+                </div>
+            </li>
+                    </ul>
+    </div>
+    <script type="text/javascript">
+        jQuery(function($){
+            $('.kk-team .team.slick:not(.slick-initialized)').slick({
+                infinite: true,
+                slidesToShow: 4,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                autoplaySpeed: 2000,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }],
+                customPaging : function(slider, i) {
+                    var thumb = jQuery(slider.$slides[i]).data();
+                    return '<a href="javascript:;">•</a>';
+                }
+            });
+        })
+    </script>
+</section>    <section class="quote-with-photo">
+    <div class="container">
+        <div class="content kk-section">
+            
+
+<div class="kk-text">Our mission came as a result of all the issues I saw in the industry. I was frustrated with the quality of DevOps courses out there. They were theory-based, with poor delivery, and terrible customer service. There was a clear need for a hands-on, seamless DevOps learning platform. Our mission today is to take our platform to everyone in the world of DevOps. The feedback from our students gave me the confidence to realize that we are the best-in-class for DevOps education. It’s our duty to bring our platform to every single student who can benefit from it.</div>            <div class="info">
+                <div class="name">
+                    Mumshad Mannambeth                </div>
+                <div class="title">
+                    Founder & CEO of KodeKloud                </div>
+            </div>
+        </div>
+        <div class="photo">
+            <div class="kk-double-quote"></div>
+            <div class="kk-dots-ball-full"></div>
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/ec8683dd4297c1b573f498670f85fb5a-1-1-1.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+            </div>
+</section>    <section class="kk-section kk-image-text sign-up image-left bg-default">
+    <div class="container kk-2-columns" >
+        <div class="kk-column kkit-image">
+            <div class="kk-image">
+    <img src="https://kodekloud.com/wp-content/uploads/2022/05/kk-06.png" style="transform: scale(1)" alt="" loading="lazy" />
+</div>        </div>
+        <div class="kk-column kkit-text">
+            <h2 class="kk-title secondary purple"><span>START YOUR DEVOPS</span> JOURNEY WITH KODEKLOUD’S COURSES.</h2>
+
+<div class="kk-text">Sign up now and get access to all 31 DevOps online training courses and over 200 hands-on labs. You can try our platform for free. We also offer a 30-day money-back guarantee for paying members.</div>            <div class="cta">
+                <div class="kk-buttons">
+                        <a href="https://kodekloud.com/pricing/"            class="kk-button blue-green"><span>See Our Plans</span></a>
+        </div>            </div>
+            <div class="circle-bg"></div>
+        </div>
+    </div>
+</section></div>
+
+
+
+</div><!-- .bb-grid -->
+</div><!-- .container -->
+</div><!-- #content -->
+
+
+
+		<div class="footer-widget-area bb-footer">
+			<div class="container">
+				<div class="bb-grid">
+											<div class="footer-widget area-1">
+							<aside id="nav_menu-5" class="widget widget_nav_menu"><h2 class="widget-title">Kodekloud</h2><div class="menu-kodekloud-container"><ul id="menu-kodekloud" class="menu"><li id="menu-item-212919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212919"><a href="https://kodekloud.com/about-us/">About Us</a></li>
+<li id="menu-item-212928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212928"><a href="https://kodekloud.com/our-values/">Our Values</a></li>
+<li id="menu-item-709561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709561"><a href="https://kodekloud.com/affiliates/">Affiliates</a></li>
+<li id="menu-item-212922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212922"><a href="https://kodekloud.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-212925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212925"><a target="_blank" rel="noopener" href="https://careers.kodekloud.com/">Careers at KodeKloud</a></li>
+<li id="menu-item-699586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-699586"><a href="https://kodekloud.com/teach-with-us/">Teach with Us</a></li>
+</ul></div></aside>						</div><!-- .footer-widget -->
+					
+											<div class="footer-widget area-2">
+							<aside id="nav_menu-7" class="widget widget_nav_menu"><h2 class="widget-title">Help</h2><div class="menu-help-container"><ul id="menu-help" class="menu"><li id="menu-item-169311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169311"><a href="https://kodekloud.com/tutorials/">Tutorials</a></li>
+<li id="menu-item-3565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3565"><a href="https://kodekloud.com/terms-of-service/">Terms Of Service</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="https://kodekloud.com/give-us-feedback">Give us feedback</a></li>
+<li id="menu-item-3896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-3896"><a href="https://kodekloud.com/privacy/">Privacy Policy</a></li>
+<li id="menu-item-196380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-196380"><a target="_blank" rel="noopener" href="http://support.kodekloud.com/">Support</a></li>
+<li id="menu-item-212937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212937"><a href="https://kodekloud.com/request-a-course/">Request a Course</a></li>
+</ul></div></aside>						</div><!-- .footer-widget -->
+					
+											<div class="footer-widget area-3">
+							<aside id="nav_menu-6" class="widget widget_nav_menu"><h2 class="widget-title">Your Account</h2><div class="menu-footer-my-account-container"><ul id="menu-footer-my-account" class="menu"><li id="menu-item-3563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3563"><a href="https://kodekloud.com/login/">Sign In</a></li>
+<li id="menu-item-3562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3562"><a href="https://kodekloud.com/join-kodekloud-free/">Register</a></li>
+<li id="menu-item-25813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25813"><a href="https://kodekloud.com/learning-path-devops-basics/">Learning Path</a></li>
+</ul></div></aside>						</div><!-- .footer-widget -->
+					
+											<div class="footer-widget area-4">
+							<aside id="text-4" class="widget widget_text"><h2 class="widget-title">Company Info</h2>			<div class="textwidget"><p>Zaurac Technologies Pte Ltd 14<br />
+Robinson Road #08-01A<br />
+Singapore 048545</p>
+</div>
+		</aside>						</div><!-- .footer-widget -->
+					
+											<div class="footer-widget area-5">
+							<aside id="boss-follow-us-5" class="widget widget_follow_us"><h2 class="widget-title">Social Media</h2><div class="bb-follow-links"><a href="https://www.facebook.com/kodekloudtraining/" target="_blank"><i class="bb-icon-bf bb-icon-brand-facebook"></i></a><a href="https://twitter.com/mmumshad" target="_blank"><i class="bb-icon-bf bb-icon-brand-twitter"></i></a><a href="https://youtube.com/mmumshad" target="_blank"><i class="bb-icon-rf bb-icon-brand-youtube"></i></a><a href="https://instagram.com/kodekloud" target="_blank"><i class="bb-icon-bf bb-icon-brand-instagram"></i></a><a href="https://www.linkedin.com/company/kodekloud" target="_blank"><i class="bb-icon-bf bb-icon-brand-linkedin"></i></a></div></aside>						</div><!-- .footer-widget -->
+									</div>
+			</div><!-- .widget-area -->
+		</div>
+		
+	<footer class="footer-bottom bb-footer style-1">
+		<div class="container flex">
+			<div class="footer-bottom-left">				<div class="copyright">© 2022 - Kodekloud.com | All rights reserved</div>
+				</div><div class="footer-bottom-right push-right"></div>		</div>
+	</footer>
+
+</div><!-- #page -->
+
+
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/7d70b66e-cc18-42d5-9b5e-c84febb64488.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script><script type="text/javascript" src="https://yr789.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+<!-- Integrate upvoty with wordpress START -->
+	    <div data-upvoty></div>
+	    <script type='text/javascript' src='https://kodekloud.upvoty.com/javascript/upvoty.embed.js'></script>
+	    <script type='text/javascript'>
+	    upvoty.init('identify', {
+	        user: {
+	            id: 702395,
+	            name: "Aadhaar koul",
+	            email: "aadhaarkoul2002@gmail.com",
+				avatar: "https://lh3.googleusercontent.com/a-/AOh14Ghui_4ikkSZSy5PP4YvAcz-nJ1OGX2k8LQuH5nQIw=s96-c"
+	        },
+	        baseUrl: 'kodekloud.upvoty.com',
+	        publicKey: '39b784ca9d32bbdbb4b4c25e55c25f0b',
+	    });
+	    </script>
+	    <!-- Integrate upvoty with wordpress STOP -->
+	        <script type="text/javascript">
+            jQuery(function($){
+                let $reset_conf = $('.kk-reset-confirmation');
+                let $reset_form = $('.learndash-reset-form');    
+
+                if($reset_form.length) {
+                        $reset_form.add($reset_conf).on('click', '.learndash-reset-button, .kk-reset-no', function(e){
+                            e.preventDefault();
+                            $reset_conf.toggleClass('show'); 
+                            console.log("class toggled");
+                        });
+                        $reset_conf.on('click', '.kk-reset-yes', function(e){ 
+                            e.preventDefault();
+                            $reset_form.submit();
+                            $reset_conf.find(".content").html('<div class="loader-text">Please wait...</div>');
+                        });
+                }
+            });
+        </script>
+
+    <script type='text/javascript' src='https://kodekloud.com/wp-includes/js/underscore.min.js?ver=1.13.3' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/wp-util.min.js?ver=6.0' id='wp-util-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/hooks.min.js?ver=c6d64f2cb8f5c6bb49caca37f8828ce3' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/i18n.min.js?ver=ebee46757c6a411e38fd079a7ac71d94' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='bp-nouveau-js-extra'>
+/* <![CDATA[ */
+var BP_Nouveau = {"ajaxurl":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php","only_admin_notice":"As you are the only organizer of this group, you cannot leave it. You can either delete the group or promote another member to be an organizer first and then leave the group.","is_friend_confirm":"Are you sure you want to remove your connection with this member?","confirm":"Are you sure?","confirm_delete_set":"Are you sure you want to delete this set? This cannot be undone.","show_x_comments":"View previous comments","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","object_nav_parent":"#buddypress","empty_field":"New Field","objects":{"1":"members","4":"xprofile","10":"settings","12":"search"},"nonces":{"members":"75a9204f51","xprofile":"559845a1c6","settings":"6492729e7d","search":"dbe8f477cc"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/js/buddypress-nouveau.min.js?ver=2.0.1' id='bp-nouveau-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/js/jquery.guillotine.min.js?ver=2.0.1' id='guillotine-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/comment-reply.min.js?ver=6.0' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1' id='jquery-ui-menu-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/dom-ready.min.js?ver=d996b53411d1533a84951212ab6ac4ff' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/dist/a11y.min.js?ver=a38319d7ba46c6e60f7f9d4c371222c5' id='wp-a11y-js'></script>
+<script type='text/javascript' id='jquery-ui-autocomplete-js-extra'>
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.1' id='jquery-ui-autocomplete-js'></script>
+<script type='text/javascript' id='bp-nouveau-search-js-extra'>
+/* <![CDATA[ */
+var BP_SEARCH = {"nonce":"8c99b612d6","action":"bp_search_ajax","debug":"1","ajaxurl":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php","loading_msg":"Loading suggestions...","enable_ajax_search":"1","per_page":"5","autocomplete_selector":".header-search-wrap .search-form","form_selector":".widget_search .search-form","forums_autocomplete":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/js/buddypress-search.min.js?ver=2.0.1' id='bp-nouveau-search-js'></script>
+<script type='text/javascript' id='leadin-script-loader-js-js-extra'>
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"memberium_freemembership","pageType":"home","leadinPluginVersion":"8.12.0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://js.hs-scripts.com/6783951.js?integration=WordPress&#038;ver=8.12.0' async defer id='hs-script-loader'></script>
+<script type='text/javascript' id='learndash-front-js-extra'>
+/* <![CDATA[ */
+var ldVars = {"postID":"638385","videoReqMsg":"You must watch the video before accessing this content","ajaxurl":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//kodekloud.com/wp-content/plugins/sfwd-lms/themes/ld30/assets/js/learndash.js?ver=3.6.0.3' id='learndash-front-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-contact-form-7-tracker.js?ver=1.14.2' id='gtm4wp-contact-form-7-tracker-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/menu.js?ver=2.0.1' id='boss-menu-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/fitvids.js?ver=2.0.1' id='boss-fitvids-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/slick.min.js?ver=2.0.1' id='boss-slick-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/panelslider.min.js?ver=2.0.1' id='boss-panelslider-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/sticky-kit.js?ver=2.0.1' id='boss-sticky-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/jssocials.min.js?ver=2.0.1' id='boss-jssocials-js-js'></script>
+<script type='text/javascript' id='buddyboss-theme-main-js-js-extra'>
+/* <![CDATA[ */
+var bs_data = {"jm_ajax":"https:\/\/kodekloud.com\/jm-ajax\/","ajaxurl":"https:\/\/kodekloud.com\/wp-admin\/admin-ajax.php","show_notifications":"","show_messages":"","facebook_label":"Share on Facebook","twitter_label":"Tweet","translation":{"comment_posted":"Your comment has been posted.","comment_btn_loading":"Please Wait...","choose_a_file_label":"Choose a file"},"learndash":{"nonce_get_courses":"a3ceaa134f","course_archive_url":"\/"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/main.js?ver=2.0.1' id='buddyboss-theme-main-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/validate.min.js?ver=2.0.1' id='boss-validate-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/plugins/buddyboss-platform/bp-core/js/vendor/magnific-popup.js?ver=2.0.1' id='bp-nouveau-magnific-popup-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/select2.full.min.js?ver=2.0.1' id='select2-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/progressbar.min.js?ver=2.0.1' id='progressbar-js-js'></script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/vendors/mousewheel.min.js?ver=2.0.1' id='mousewheel-js-js'></script>
+<script type='text/javascript' id='buddyboss-theme-learndash-js-js-extra'>
+/* <![CDATA[ */
+var BBTHEME_LEARNDASH_FRONT_VIDEO = {"hide_wrapper":"show","video_progression_enabled":"off","video_type":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kodekloud.com/wp-content/themes/buddyboss-theme/assets/js/plugins/learndash.min.js?ver=2.0.1' id='buddyboss-theme-learndash-js-js'></script>
+<script>setTimeout(function() { jQuery('.learndash_mark_complete_button').removeAttr('disabled'); }, 1000);				
+
+
+jQuery( window ).load( function(){
+    
+    var mpTrack = function(eventName){
+        mixpanel.track(eventName);
+        mixpanel.identify(dataLayer_content.visitorId.toString());
+        mixpanel.people.set_once({ "email": dataLayer_content.visitorEmail });
+        mixpanel.people.set_once({ "username": dataLayer_content.visitorUsername });
+    }
+    
+    var mpClick = function(path, eventName){
+        jQuery(path).on('click', function(){
+            mpTrack(eventName);
+        });
+    }
+    
+    var video_iframe;
+    var video_iframe_0;
+    var vimeo_player;
+    
+    var course_name = jQuery('.course-entry-title').text();
+    var topic_name = jQuery('#learndash-course-header h1').text();
+    var user_name = jQuery('.bb-mobile-panel-header .user-wrap a').size() ? jQuery('.bb-mobile-panel-header .user-wrap a').attr('href').split('members/')[1].replace('/', '') :''
+    // Get vimeo player from iframe
+    //TODO: Make sure this is only done within topics and lessons in courses and not in other parts of the website.
+    var get_vimeo_player = function(){
+        video_iframe = jQuery('iframe[src^="https://player.vimeo.com"]')
+        video_iframe_0 = video_iframe[0]
+        if(video_iframe_0){
+         try {
+             vimeo_player = new Vimeo.Player(video_iframe_0);
+           }
+           catch(err) {
+             console.log(err.message);
+           }
+        }        
+    }
+    get_vimeo_player();  
+    /* On vimeo player loaded event:
+     - Get vimeo iframe src and replaceadd autoplay to 1
+     - Get any vimeo settings from localstorage and apply them - like close captions, video speed etc.
+     On video player settigns change:
+     - Get the changed setting and store it in localstorage
+    */
+    var call_success = function(){
+    }
+    var call_failure = function(error){
+        console.log(error)
+    }
+    
+    var send_to_mixpanel = function(event_name, video_duration) {
+            console.log("Sending to Mixpanel")    
+            console.log(video_duration)
+            try {
+             mixpanel.track(event_name,{
+              "Course name": course_name,
+              "Topic name": topic_name,
+              "Video duration": video_duration
+             });
+            }
+            catch(err) {
+             console.log("Error tracking in MixPanel");
+             console.log(err.message);
+            }
+         
+    }
+    
+    var track_video_completion = function(data){
+        send_to_mixpanel("Video Completed", data.duration)
+    }
+    
+    var last_duration = 0;
+    // Update video consumption tracking using progress event.
+    // Only track every 2 minutes of consumption. Otherwise it's a lot of event triggers.
+    var track_video_consumption = function(data){
+        var duration_diff = data.seconds - last_duration;
+        if( duration_diff > 120 ){
+            send_to_mixpanel("Video Consumed", duration_diff)   
+            last_duration=data.seconds
+        }
+        
+    }
+    
+    if(vimeo_player){
+         
+        mixpanel.track('Topic View');
+        mixpanel.identify(dataLayer_content.visitorId.toString());
+        mixpanel.people.set_once({ "email": dataLayer_content.visitorEmail });
+        mixpanel.people.set_once({ "username": dataLayer_content.visitorUsername });
+         
+        vimeo_player.on('progress', track_video_consumption);
+        vimeo_player.on('ended', track_video_completion);
+    }
+    
+    //My-Account Subscription page (contains cancellation flow) 
+    if(document.body.classList.contains('woocommerce-view-subscription')){
+        mpTrack('CF - View Page');
+        
+        //Trigger on open - for business products only
+        if(jQuery('.kk-popup.cancellation.business-product').size()) {
+            mpClick('.button.cancel', 'CF - Open Business');
+        }
+        //Trigger on open - for subscriptions without coupon offer in flow
+        else if(jQuery('.kk-popup.cancellation.coupon-disabled').size()){
+            mpClick('.button.cancel', 'CF - Open (with coupon)');
+        }
+        //Trigger on open - for subscriptions with coupon offer in flow
+        else {
+            mpClick('.button.cancel', 'CF - Open (no coupon)');
+        }
+        //mpClick('.button.cancel', 'CF - Open');
+        
+        mpClick('.kk-popup.cancellation .step-business .btn-cancel-business', 'CF - Step Business - Cancel');
+        mpClick('.kk-popup.cancellation .step-business .success-message .btn-close', 'CF - Step Business - Sent Request');
+        mpClick('.kk-popup.cancellation .step-business .content .btn-close', 'CF - Step Business - Close');
+        
+        mpClick('.kk-popup.cancellation .step-1 .content .btn-pause', 'CF - Step 1 - Pause');
+        mpClick('.kk-popup.cancellation .step-1 .success-message .btn-close', 'CF - Step 1 - Paused!');
+        mpClick('.kk-popup.cancellation .step-1 .content .btn-next', 'CF - Step 1 - Next');
+        
+        mpClick('.kk-popup.cancellation .step-2 .content .btn-claim-discount', 'CF - Step 2 - Claim Discount');
+        mpClick('.kk-popup.cancellation .step-2 .success-message .btn-close', 'CF - Step 2 - Claimed!');
+        mpClick('.kk-popup.cancellation .step-2 .content .btn-next', 'CF - Step 2 - Next');
+        
+        //On popup close by clicking background (not close button)
+        jQuery('.kk-popup').on('click', function(e){
+        	if(jQuery(e.target).hasClass('kk-popup')) {
+        	    var $completed = jQuery('.kk-popup.cancellation.completed .box.show');
+        	    if($completed.hasClass('step-business')){
+        	        //Sent cancellation email request for business package
+        	        mpTrack('CF - Step Business - Sent Request');
+        	    }else if($completed.hasClass('step-1')) {
+        	        //3 months pause claimed
+        	        mpTrack('CF - Step 1 - Paused!');
+        	    }else if($completed.hasClass('step-2')){
+        	        //discount claimed
+        	        mpTrack('CF - Step 2 - Claimed!');
+        	    }else {
+        	        //popup just closed
+        	        mpTrack('CF - Close');
+        	    }
+        	}
+        });
+    } 
+    
+    //Cancellation feedback page
+    if(document.body.classList.contains('page-id-621005')) {
+        mpTrack('CF Feedback - View');
+        window.addEventListener('message', function(message) {
+            if('onFormSubmit' == message.data.eventName){
+                mpTrack('CF Feedback - Submit');
+            }
+        });
+    }
+    
+ });				</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Kodekloud",
+  "image": "https://cdn-kodekloud.pressidium.com/wp-content/uploads/2020/09/KodeKloud_logo2-1.svg",
+  "@id": "",
+  "url": "https://kodekloud.com/",
+  "address": [{
+    "@type": "PostalAddress",
+    "streetAddress": "14 Robinson Road",
+    "addressLocality": "#08-01A, Singapore",
+    "postalCode": "048545",
+    "addressCountry": "SG"
+  }]
+}
+
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-576de6a06e4bafd36e6","applicationID":"169428213","transactionName":"MhBSZQoZDRUCAENRCQtacVIMEQwITAtYVQMVFFdUVQlRS1FTBQo=","queueTime":0,"applicationTime":671,"atts":"HldRE0IDHhs=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>
