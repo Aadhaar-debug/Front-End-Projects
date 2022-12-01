@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@alan-ai/alan-sdk-web": "^1.8.34",
+    "@material-ui/core": "^4.12.4",
+    "classnames": "^2.3.1",
+    "numbers": "^0.7.0",
+    "to": "^0.2.9",
+    "words": "^0.1.4"
+  }
+}
